@@ -26,13 +26,13 @@ ul{
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .dark{
     padding: 15px;
     background: #FFBF00;
-    color: #ffffff;
+    color: #000000;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -40,7 +40,7 @@ ul{
 /* Header */
 header {
     background: #FFBF00;
-    color: #ffffff;
+    color: #000000;
     padding-top:30px;
     min-height:70px;
     border-bottom: #ffffff 3px solid;
