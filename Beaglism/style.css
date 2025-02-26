@@ -15,6 +15,7 @@ body{
     overflow: hidden;
 }
 
+
 ul{
     margin: 0;
     padding: 0;
@@ -163,6 +164,7 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
 article#main-col{
     float: left;
     width: 65%;
+    color: #e6e6e6;
 }
 
 /* Services */
