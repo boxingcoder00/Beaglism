@@ -4,7 +4,7 @@ body{
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: #000000;
+    background-color: #FFDAB9;
 }
 
 /* Global */
@@ -32,7 +32,7 @@ ul{
 
 .dark{
     padding: 15px;
-    background: #FFBF00;
+    background: #FFDB58;
     color: #000000;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -40,7 +40,7 @@ ul{
 
 /* Header */
 header {
-    background: #FFBF00;
+    background: #FFDB58;
     color: #000000;
     padding-top:30px;
     min-height:70px;
@@ -75,7 +75,7 @@ header nav{
 }
 
 header .highlight, header .current a{
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -93,7 +93,7 @@ header .highlight{
     min-height: 400px;
     background: url('img/showcase.png') no-repeat 0 -400px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 }
 
 #showcase h1{
@@ -111,7 +111,6 @@ header .highlight{
 #newsletter{
     padding: 15px;
     color: #ffffff;
-    background: #FFBF00;
 }
 
 #newsletter h1{
@@ -164,7 +163,7 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
 article#main-col{
     float: left;
     width: 65%;
-    color: #e6e6e6;
+    color: black;
 }
 
 /* Services */
@@ -180,8 +179,8 @@ ul#services li{
 footer{
     padding: 20px;
     margin-top: 20px;
-    color: #ffffff;
-    background-color: #FFBF00;
+    color: #000000;
+    background-color:  #FFDAB9;
     text-align: center;
     font-size: 20px;
 }
