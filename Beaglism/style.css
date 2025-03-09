@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: #FFDAB9;
+    background-color: white;
 }
 
 /* Global */
@@ -13,6 +15,9 @@ body{
     width: 80%;
     margin: auto;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -32,7 +37,7 @@ ul{
 
 .dark{
     padding: 15px;
-    background: #FFDB58;
+    background: #F8F4E3;
     color: #000000;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -40,12 +45,13 @@ ul{
 
 /* Header */
 header {
-    background: #FFDB58;
+    background: #1D3557;
     color: #000000;
     padding-top:30px;
     min-height:70px;
     border-bottom: #ffffff 3px solid;
 }
+
 
 header a{
     color: #000000;
@@ -263,7 +269,7 @@ button:hover {
 }
 
 .hero-text p {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     color: #6b7280;
     margin-bottom: 30px;
 }
@@ -280,6 +286,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
+    max-width: 100%;
+    max-height: 40%;
 }
 
 .hero-image img:hover {
