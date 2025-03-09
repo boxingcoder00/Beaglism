@@ -280,6 +280,8 @@ button:hover {
 
 .hero-image {
     flex: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 .hero-image img {
