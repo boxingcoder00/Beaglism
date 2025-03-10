@@ -156,6 +156,10 @@ header .highlight{
 #boxes .box img{
     width: 300px;
     height: 200px;
+}  
+
+#boxes .box img:hover {
+     transform: scale(1.02);
 }
 
 /* Sidebar */
