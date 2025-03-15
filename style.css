@@ -496,3 +496,82 @@ button:hover {
     transform: translateY(0);
     box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
   }
+
+/* Beagle Resources*/
+
+.beagle-pros-cons {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.beagle-pros-cons h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 300%;
+}
+
+.beagle-pros-cons .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.beagle-pros-cons .column {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid;
+}
+
+.beagle-pros-cons .pros {
+    background-color: #f5f9f5;
+    border-left-color: #4CAF50;
+}
+
+.beagle-pros-cons .cons {
+    background-color: #fdf5f5;
+    border-left-color: #F44336;
+}
+
+.beagle-pros-cons h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.beagle-pros-cons ul {
+    padding-left: 20px;
+}
+
+.beagle-pros-cons li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.beagle-pros-cons .beagle-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.beagle-pros-cons .beagle-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media (max-width: 650px) {
+    .beagle-pros-cons .container {
+        flex-direction: column;
+    }
+}
