@@ -570,6 +570,21 @@ button:hover {
     object-fit: cover;
 }
 
+.beagle-pros-cons .summary {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border-left: 5px solid #9E9E9E;
+    line-height: 1.6;
+}
+
+.beagle-pros-cons .summary h3 {
+    margin-top: 0;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
 @media (max-width: 650px) {
     .beagle-pros-cons .container {
         flex-direction: column;
