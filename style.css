@@ -634,3 +634,126 @@ button:hover {
   .back-link:hover {
     background-color: #0052a3;
   }
+
+  /* Beagle grooming */
+
+  .beagle-grooming-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 25px;
+    color: #333;
+  }
+  
+  .beagle-grooming-title {
+    text-align: center;
+    color: #1a73e8;
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .beagle-grooming-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1a73e8;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+  
+  .task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .task-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .task-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .task-card h3 {
+    color: #1a73e8;
+    margin: 0 0 5px 0;
+    font-size: 20px;
+  }
+  
+  .task-time {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #1a73e8;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .task-card p {
+    margin: 0;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .grooming-tip-box {
+    background: #f5f9ff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    border-left: 5px solid #1a73e8;
+  }
+  
+  .tip-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .tip-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .tip-header h4 {
+    margin: 0;
+    color: #1a73e8;
+    font-size: 18px;
+  }
+  
+  .tip-list {
+    margin: 0;
+    padding-left: 30px;
+  }
+  
+  .tip-list li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+  }
+  
+  .tip-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .task-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .beagle-grooming-title {
+      font-size: 28px;
+    }
+  }
