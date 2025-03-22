@@ -185,6 +185,10 @@ article#main-col{
     color: black;
 }
 
+#main-col p1{
+    line-height: 1.8; 
+}
+
 /* Services */
 
 ul#services li{
