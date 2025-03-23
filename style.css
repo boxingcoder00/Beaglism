@@ -761,3 +761,167 @@ button:hover {
       font-size: 28px;
     }
   }
+
+  /* Main container */
+  .beagle-guide-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  
+  /* Header styles */
+  .beagle-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0e6d9;
+    position: relative;
+  }
+  
+  .beagle-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #bb8c5f;
+    border-radius: 5px;
+  }
+  
+  .beagle-title {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  .beagle-subtitle {
+    color: black;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  /* Timeline styles */
+  .beagle-timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  .beagle-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    width: 3px;
+    background-color: #f0e6d9;
+  }
+  
+  /* Tip section styles */
+  .beagle-tip {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .beagle-tip::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #bb8c5f;
+    border: 3px solid #f0e6d9;
+    z-index: 1;
+  }
+  
+  .beagle-tip-header {
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .beagle-tip-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #bb8c5f;
+    color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .beagle-tip-title {
+    display: inline-block;
+    color: #744924;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  
+  .beagle-tip-content {
+    padding-left: 45px;
+    color: black;
+    line-height: 1.8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .beagle-tip-header:hover + .beagle-tip-content, 
+  .beagle-tip-content:hover {
+    max-height: 500px;
+  }
+
+   /* Footer styles */
+   .beagle-footer {
+    padding-top: 20px;
+    border-top: 2px solid #f0e6d9;
+    text-align: center;
+    font-style: italic;
+    color: black;
+    margin-top: auto;
+  }
+  
+  .beagle-quote {
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fcf9f6;
+    border-left: 5px solid #bb8c5f;
+    font-size: 18px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .beagle-guide-container {
+      padding: 20px 15px;
+    }
+    
+    .beagle-title {
+      font-size: 28px;
+    }
+    
+    .beagle-timeline {
+      padding-left: 30px;
+    }
+    
+    .beagle-tip::before {
+      left: -30px;
+    }
+    
+    .beagle-tip-content {
+      padding-left: 30px;
+    }
+  }
