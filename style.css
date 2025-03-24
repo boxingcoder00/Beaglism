@@ -188,7 +188,7 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
     transition: transform 0.3s ease;
   }
 
-  #sidabar img:hover {
+  #sidebar img:hover {
     transform: scale(1.02);
 }
 
