@@ -1046,6 +1046,27 @@ button:hover {
             font-style: italic;
         }
 
+        /* 10 fun facts code */
+
+      
+      h1 {
+          text-align: center;
+          color: #8B4513;
+          margin-bottom: 30px;
+      }
+      
+      .fact {
+          margin-bottom: 15px;
+          padding: 10px;
+          border-bottom: 1px solid #eee;
+      }
+      
+      .fact-number {
+          font-weight: bold;
+          color: #8B4513;
+          margin-right: 5px;
+      }
+    
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
