@@ -1066,6 +1066,48 @@ button:hover {
           color: #8B4513;
           margin-right: 5px;
       }
+
+      /* why you should adopt */
+
+      .adoption-container {
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    
+    .adoption-header {
+        text-align: center;
+        color: #4a6741;
+        margin-bottom: 30px;
+    }
+    
+    .reason-card {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .reason-title {
+        color: #4a6741;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .reason-description {
+        line-height: 1.5;
+    }
+    
+    .adoption-footer {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-style: italic;
+        color: black;
+    }
     
         @media (max-width: 768px) {
             .tabs {
