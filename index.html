@@ -49,38 +49,105 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <div class="hero-container">
+      <!-- Title Section -->
+      <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Discover Beaglism</h1>
-                    <p>Your one-stop destination for everything about the beloved Beagle breed!</p>
-                    <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary"></a>
-                        <a href="#" class="btn btn-secondary"></a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="img/puppy.jpg" alt="Beaglism">
-                </div>
+                    <p>From puppy education to breed awareness, we're your one-stop destination for everything about those lovable, floppy-eared Beagles!</p>
+                 </div>
             </div>
+          </div>
         </div>
-    </section>
-        </div>  
-    </section>
+      </div>    
+  
+    <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="img/Bandits2.jpeg" alt="What started Beaglism! These are the inspirations behind the movement. #Beaglism">
+        </div>
+      
+        <div class="slide fade">
+          <img src="img/puppy.jpg" alt="Three puppies in a basket" >
+        </div>
+      
+        <div class="slide fade">
+          <img src="img/wild.jpg" alt="We advocate for using Beagles what they were made for. The beagle will absolutely love it! ">
+        </div>
+
+        <div class="slide fade">
+          <img src="img/puppy1.jpg" alt="Perfect Beagle.">
+        </div>
+
+        <div class="slide fade">
+          <img src="img/oldschool.jpg" alt="History of beagles">
+        </div>
+
+        <!-- Basic Navigation Arrows -->
+        <div class="nav-arrow prev">
+          <i class="arrow-icon"></i>
+        </div>
+        <div class="nav-arrow next">
+          <i class="arrow-icon"></i>
+        </div>
+      
+      </div>
+      
+      <script>
+      // Replace your current JavaScript with this
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Attach event listeners to the navigation arrows
+        document.querySelector('.nav-arrow.prev').addEventListener('click', function() {
+          plusSlides(-1);
+        });
+
+        document.querySelector('.nav-arrow.next').addEventListener('click', function() {
+          plusSlides(1);
+        });
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            if (dots[i]) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+          }
+          slides[slideIndex-1].style.display = "block";
+          if (dots[slideIndex-1]) {
+            dots[slideIndex-1].className += " active";
+          }
+        }
+
+
+        // Automatic Slideshow (Optional)
+        setInterval(function() {
+          plusSlides(1);
+        }, 8000); // Change image every 5 seconds
+      </script>
 
     <div class="paw-button-container">
         <button class="paw-button" onclick="window.location.href='./about'">Click to learn more!</button>
     </div>
-      </div>
-    
-    <section id="newsletter">
-    </section>
-
-    <section id="boxes">
-    </section>
-
 
     <footer>
         <p></p>
@@ -95,6 +162,5 @@
             document.querySelector('.nav-menu').classList.toggle('active');
         });
     </script>
-
 </body>
 </html>

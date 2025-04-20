@@ -1,0 +1,21 @@
+<div class="hero-section">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Discover Beaglism</h1>
+                    <p>Your one-stop destination for everything about the beloved Beagle breed!</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary"></a>
+                        <a href="#" class="btn btn-secondary"></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/puppy.jpg" alt="Beaglism">
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>  
+    </section>
