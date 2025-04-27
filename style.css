@@ -557,7 +557,7 @@ button:hover {
 /* Beagle Resources*/
 
 /* Header navigation styling */
-.resource-nav-container {
+.resource-container {
   width: 70%;
   margin: auto;
   transition: box-shadow 0.3s ease;
