@@ -578,7 +578,7 @@ button:hover {
 .resource-container #branding h2 a {
   position: relative;
   text-decoration: none;
-  color: #333; 
+  color: #000000; 
 }
 
 /* Content area styling */
@@ -689,7 +689,7 @@ nav ul li {
     margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 25px;
-    color: #333;
+    color: #000000;;
   }
   
   .beagle-grooming-title {
