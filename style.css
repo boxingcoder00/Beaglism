@@ -13,7 +13,6 @@ body{
 
 /* Global */
 
-
 .container{
     width: 80%;
     margin: auto;
@@ -38,15 +37,6 @@ img:hover {
 ul{
     margin: 0;
     padding: 0;
-}
-
-.button_1{
-    height: 38px;
-    background: #ED0800;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #000000;
 }
 
 .dark{
@@ -74,12 +64,13 @@ header a{
 }
 
 header li{
-    float:left;
+    float: left;
     display: flex;
     padding: 0 20px 0 20px;
     color: #000000;
     margin-right: 0;
     margin-bottom: 10px; /* Space between items */
+    display: inline-block;
 }
 
 header #branding{
@@ -112,6 +103,14 @@ header a:hover{
 
 header .highlight{
     color: #000000;
+}
+
+.nav-container {
+  width: 80%;
+  margin: auto;
+  transition: box-shadow 0.3s ease;
+  padding: 0.1rem;
+  margin-bottom: 0;
 }
 
 /* Boxes */
@@ -164,18 +163,59 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
 }
 
 
-/* Main-col */
-
-article#main-col{
-    float: left;
-    width: 65%;
-    color: black;
+/* Dropdown Container */
+.simple-dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-#main-col p1{
-    line-height: 1.8; 
+/* Dropdown Button (styled like a nav link) */
+.simple-dropdown .dropbtn {
+  /* This should match your existing nav link styling */
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  top: 100%; /* Ensures it starts right below the parent */
+  left: 0;
+  /* Fix for cut-off dropdown */
+  max-height: none; /* Remove any height restrictions */
+  overflow: visible; /* Ensure content isn't cut off */
+}
+
+/* Links inside the Dropdown */
+.dropdown-items a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-items a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.simple-dropdown:hover .dropdown-items {
+  display: block;
+}
+
+/* Fix for container constraints */
+ul, nav {
+  overflow: visible !important; /* Override any overflow restrictions from parent elements */
+}
 /* Services */
 
 ul#services li{
@@ -337,6 +377,34 @@ button:hover {
         margin-bottom: 5px;
     } 
 
+    .simple-dropdown .dropdown-items {
+      position: static; /* Change from absolute to static */
+      width: 100%;
+      display: none;
+      box-shadow: none;
+      background-color: #f8f8f8; /* Slightly different shade to indicate nesting */
+    }
+    
+    .simple-dropdown.active .dropdown-items {
+      display: block; /* Show when parent has active class */
+    }
+    
+    /* Style dropdown items in mobile view */
+    .simple-dropdown .dropdown-items a {
+      padding: 10px;
+      text-align: center;
+      border-top: 1px solid #e7e7e7;
+    }
+    
+    /* Add toggle indicator to dropdown button */
+    .simple-dropdown .dropbtn:after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+    
+    .simple-dropdown.active .dropbtn:after {
+      content: " ▲";
+    }
 }
 
     /* NEWER CODE*/
@@ -488,96 +556,86 @@ button:hover {
 
 /* Beagle Resources*/
 
+/* Header navigation styling */
+.resource-nav-container {
+  width: 70%;
+  margin: auto;
+  transition: box-shadow 0.3s ease;
+  padding: 0.1rem;
+  margin-bottom: 14%;
+}
+
+#branding {
+  margin: 0;
+  padding: 0;
+}
+
+#branding h2 {
+  margin: 0; /* Remove default margins */
+  padding: 0;
+}
+
+.resource-nav-container #branding h2 a {
+  position: relative;
+  text-decoration: none;
+  color: #333; 
+}
+
+/* Content area styling */
 .beagle-pros-cons {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 5px;
+  font-family: Arial, sans-serif;
+  margin: 50px auto 0; /* Keep your top margin */
+  padding: 14px;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
 .beagle-pros-cons h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    font-size: 300%;
+  margin-top: 0; /* Change from 300px to 0 */
 }
 
-.beagle-pros-cons .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Navigation styling */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
-.beagle-pros-cons .column {
-    flex: 1;
-    min-width: 300px;
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 5px solid;
+nav ul li {
+  margin-left: 15px;
 }
 
-.beagle-pros-cons .pros {
-    background-color: #f5f9f5;
-    border-left-color: #4CAF50;
+/* Add these new styles for the dropdown */
+.simple-dropdown {
+  position: relative;
 }
 
-.beagle-pros-cons .cons {
-    background-color: #fdf5f5;
-    border-left-color: #F44336;
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 100;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
 }
 
-.beagle-pros-cons h3 {
-    margin-top: 0;
-    color: #333;
-    border-bottom: 1px dashed #ddd;
-    padding-bottom: 10px;
+.dropdown-items a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #f1f1f1;
 }
 
-.beagle-pros-cons ul {
-    padding-left: 20px;
-}
-
-.beagle-pros-cons li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.beagle-pros-cons .beagle-image {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.beagle-pros-cons .beagle-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-.beagle-pros-cons .summary {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    border-left: 5px solid #9E9E9E;
-    line-height: 1.6;
-}
-
-.beagle-pros-cons .summary h3 {
-    margin-top: 0;
-    border-bottom: 1px dashed #ddd;
-    padding-bottom: 10px;
-}
-
-@media (max-width: 650px) {
-    .beagle-pros-cons .container {
-        flex-direction: column;
-    }
+.simple-dropdown:hover .dropdown-items {
+  display: block;
 }
 
 /* error page */
