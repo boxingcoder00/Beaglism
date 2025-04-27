@@ -575,7 +575,7 @@ button:hover {
   padding: 0;
 }
 
-.resource-nav-container #branding h2 a {
+.resource-container #branding h2 a {
   position: relative;
   text-decoration: none;
   color: #333; 
