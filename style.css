@@ -186,11 +186,11 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1000;
   border-radius: 4px;
-  top: 100%; /* Ensures it starts right below the parent */
+  top: 100%; 
   left: 0;
   /* Fix for cut-off dropdown */
-  max-height: none; /* Remove any height restrictions */
-  overflow: visible; /* Ensure content isn't cut off */
+  max-height: none; 
+  overflow: visible; 
 }
 
 /* Links inside the Dropdown */
@@ -199,7 +199,7 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  white-space: nowrap; /* Prevents text wrapping */
+  white-space: nowrap; 
 }
 
 /* Change color of dropdown links on hover */
@@ -214,7 +214,7 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
 
 /* Fix for container constraints */
 ul, nav {
-  overflow: visible !important; /* Override any overflow restrictions from parent elements */
+  overflow: visible !important; 
 }
 /* Services */
 
@@ -970,7 +970,66 @@ nav ul li {
     }
   }
 
-  /* beagle nutriotion */
+     /* Typography */
+     .page-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  
+  /* Image placeholder section */
+  .image-container {
+      width: 100%;
+      margin: 20px 0;
+      text-align: center;
+  }
+  
+  .image-container img {
+      max-width: 100%;
+      height: auto;
+  }
+  
+  /* Facts styling */
+  .facts-list {
+      margin-bottom: 30px;
+  }
+  
+  .fact {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+  }
+  
+  .fact-number {
+      font-weight: bold;
+      margin-right: 5px;
+  }
+  
+  /* Adoption footer */
+  .adoption-footer {
+      margin: 30px 0;
+      font-style: italic;
+  }
+  
+  footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+      .page-title {
+          font-size: 1.5rem;
+      }
+      
+      body {
+          padding: 10px;
+      }
+  }
+
+  /* beagle nutrition */
 
   h1 {
     font-size: 1.5rem;
@@ -1196,3 +1255,4 @@ nav ul li {
               from {opacity: .4}
               to {opacity: 1}
             }
+          }
