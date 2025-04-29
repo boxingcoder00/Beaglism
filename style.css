@@ -22,6 +22,16 @@ body{
     margin-bottom: 0;
 }
 
+.landingpage-container{
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  padding: 0.1rem;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
 img {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1012,7 +1022,6 @@ nav ul li {
   }
   
   footer a {
-      margin: 0 10px;
       text-decoration: none;
       color: #333;
       font-size: 1.2rem;
@@ -1042,20 +1051,11 @@ nav ul li {
   h3 {
     font-size: 1.1rem;
     margin: 15px 0 8px 0;
-    color: #0066cc;
+    color: black;
   }
   
   p {
     margin-bottom: 10px;
-  }
-  
-  ul {
-    padding-left: 25px;
-    margin-bottom: 15px;
-  }
-  
-  li {
-    margin-bottom: 5px;
   }
   
   .card {
@@ -1085,7 +1085,7 @@ nav ul li {
     body {
       padding: 10px;
     }
-
+  
         /* 10 fun facts code */
 
       h1 {
@@ -1178,15 +1178,17 @@ nav ul li {
               display: none; /* Initially hide all slides */
               width: 100%; /* Make slides take full width of container */
               text-align: center; /* Center the image within the slide */
+              display: flex;
             }
           
             .slide img {
-              width: 100%; /* Make images fill the container */
+              width: 800%; /* Make images fill the container */
               height: auto; /* Maintain aspect ratio */
               margin: 0 auto; /* Center the image */
-            }
-          
-          
+              align-items: center; /* Add this */
+              display: flex;
+            }          
+
             .nav-arrow {
               position: absolute;
               top: 50%;
@@ -1255,4 +1257,44 @@ nav ul li {
               from {opacity: .4}
               to {opacity: 1}
             }
-          }
+
+            /* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .arrow-icon {
+    padding: 5px;
+  }
+
+  .landingpage-container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 0.1rem;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-arrow {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .arrow-icon {
+    padding: 4px;
+  }
+  
+  .nav-arrow.prev {
+    left: 5px;
+  }
+  
+  .nav-arrow.next {
+    right: 5px;
+  }
+}
