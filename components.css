@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+
+
+/* Header */
+header {
+    background: #FAF5EF;
+    color: #000000;
+    min-height:60px;
+    border-bottom: #FAF5EF 3px solid;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+header a{
+    color: #000000;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:18px;
+}
+
+header li{
+    float: left;
+    display: flex;
+    padding: 0 20px 0 20px;
+    color: #000000;
+    margin-right: 0;
+    margin-bottom: 10px; /* Space between items */
+    display: inline-block;
+}
+
+header #branding{
+    float:left;
+    font-family: 'Coiny', cursive;
+    letter-spacing: 0.01em;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+header #branding h2 a{
+  margin: 0;
+  font-size: 70%;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px; 
+}
+
+header .highlight, header .current a{
+    color: #000000;
+    font-weight: bold;
+}
+
+header a:hover{
+    color:  #F8C246;
+    font-weight: bold;
+}
+
+header .highlight{
+    color: #000000;
+}
+
+.nav-container {
+  width: 80%;
+  margin: auto;
+  transition: box-shadow 0.3s ease;
+  padding: 0.1rem;
+  margin-bottom: 0;
+}
+
+/* Make containers consistent */
+.nav-container, 
+.resources-page .resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add proper padding to create consistent spacing */
+.resources-page .resources-container {
+  padding-top: 2rem;
+}
+
+.resources-page {
+    /* Base styles */
+    --primary-color: #000000;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --link-color: #00070a;
+    
+    /* Setting body styles within the namespace */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Container with unique identifier */
+.resources-page .resources-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+/* Typography with unique identifiers */
+.resources-page h1.resources-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.resources-page h2.category-title {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.resources-page h2.category-title::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.resources-page h3.resource-title {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--secondary-color);
+    position: relative;
+    font-weight: 600;
+}
+
+.resources-page p {
+    margin-bottom: 1rem;
+}
+
+/* Resource sections */
+.resources-page .resources-header {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.resources-page .resources-header p {
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+.resources-page .resource-category {
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 1rem;
+    background-color: rgba(248, 249, 250, 0.5);
+    border-radius: 6px;
+}
+
+.resources-page .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.resources-page .resource-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.resources-page .resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.resources-page .resource-card h3.resource-title {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.resources-page .resource-card p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.resources-page .resource-card .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.resources-page .resource-card .read-more:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown menu styling */
+header .simple-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .dropdown-items {
+    display: none;
+    position: absolute;
+    background-color: #FAF5EF;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+header .dropdown-items a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-transform: none;
+}
+
+header .dropdown-items a:hover {
+    background-color: #f1f1f1;
+    color: #F8C246;
+}
+
+header .simple-dropdown:hover .dropdown-items {
+    display: block;
+}
+
+/* Fix for container name inconsistency */
+header .resource-container {
+    width: 80%;
+    margin: auto;
+    transition: box-shadow 0.3s ease;
+    padding: 0.1rem;
+    margin-bottom: 0;
+}
+
+/* Clear floats to prevent layout issues */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ensure dropdown stays on top */
+header {
+    position: relative;
+    z-index: 100;
+}
+
+/* Ensure resources content doesn't overlap with header */
+.resources-page .resources-container {
+    position: relative;
+    z-index: 90;
+}
+
+/* Links styling */
+.resources-page a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.resources-page a:hover {
+    color: var(--primary-color);
+}
+
+.resources-page .tag {
+    display: inline-block;
+    background-color: #eee;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #000000;
+    background-color: #3FA1C8;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Search & filter styles removed */
+
+/* Breadcrumbs */
+.resources-page .breadcrumbs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.resources-page .breadcrumbs a {
+    color: #666;
+}
+
+.resources-page .breadcrumbs span {
+    margin: 0 0.5rem;
+    color: #999;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resources-page .resource-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resources-page h1.resources-title {
+        font-size: 2rem;
+    }
+    
+    .resources-page h2.category-title {
+        font-size: 1.5rem;
+    }
+}
