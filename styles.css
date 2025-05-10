@@ -79,76 +79,173 @@ h1 {
     overflow: visible !important; 
   }
 
-/* Header */
 header {
-    background: #FAF5EF;
-    color: #000000;
-    min-height:60px;
-    border-bottom: #FAF5EF 3px solid;
+  background: #FAF5EF;
+  color: #000000;
+  min-height: 60px;
+  border-bottom: #FAF5EF 3px solid;
+  width: 100%;
+  justify-content: center; /* Center the header content */
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1); /* Added subtle shadow like dropdown */
 }
 
-header::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-header a{
-    color: #000000;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-size:18px;
-}
-
-header li{
-    float: left;
-    display: flex;
-    padding: 0 20px 0 20px;
-    color: #000000;
-    margin-right: 0;
-    margin-bottom: 10px; /* Space between items */
-    display: inline-block;
-}
-
-header #branding{
-    float:left;
-    font-family: 'Coiny', cursive;
-    letter-spacing: 0.01em;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-header #branding h2 a{
-  margin: 0;
-  font-size: 70%;
-}
-
-header nav{
-  float: right;
-  margin-top: 10px; 
-}
-
-header .highlight, header .current a{
-    color: #000000;
-    font-weight: bold;
-}
-
-header a:hover{
-    color:  #F8C246;
-    font-weight: bold;
-}
-
-header .highlight{
-    color: #000000;
-}
-
-.nav-container {
+.resource-container {
   width: 80%;
-  margin: auto;
-  transition: box-shadow 0.3s ease;
-  padding: 0.1rem;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Add maximum width constraint */
+}
+
+header a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header #branding {
+  font-family: 'Coiny', cursive;
+  letter-spacing: 0.01em;
+  padding: 10px 0;
+}
+
+header #branding h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+header #branding h2 a {
+  margin: 0;
+  font-size: 38px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header li {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header .highlight, header .current a {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Enhanced hover effect combining both styles */
+header a:hover {
+  color: #F8C246;
+  font-weight: bold;
+}
+
+/* Improved dropdown styling with effects from both sources */
+.simple-dropdown {
+  position: relative;
+}
+
+.simple-dropdown .dropbtn {
+  cursor: pointer;
+  padding: 5px 8px; /* Add some padding for the background */
+}
+
+.simple-dropdown .dropbtn:hover {
+  background-color: rgba(241, 241, 241, 0.3); /* Light background on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  max-height: none;
+  overflow: visible;
+  animation: fadeIn 0.2s ease-in-out; /* Smooth animation for dropdown appearance */
+}
+
+/* Animation for dropdown appearance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-items a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  border-bottom: 1px solid #f1f1f1;
+  transition: all 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Remove border from last item */
+.dropdown-items a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-items a:hover {
+  background-color: #f1f1f1;
+  color: #F8C246; /* Match header link hover color */
+  padding-left: 18px; /* Slight indent effect on hover */
+}
+
+.simple-dropdown:hover .dropdown-items {
+  display: block;
+}
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  header li {
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .dropdown-items {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 10px;
+  }
+  
+  .resource-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  header nav {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 /*  beagle quotes */
