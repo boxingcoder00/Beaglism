@@ -9,20 +9,33 @@ body{
     margin: 0;
     background-color: #FAF5EF;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Global */
 
-.container{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    padding: 0.1rem;
-    margin-bottom: 0;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: #FAF5EF;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.landingpage-container{
+/* Global */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  padding: 0.1rem;
+  margin-bottom: 0;
+}
+
+.landingpage-container {
   width: 50%;
   margin: auto;
   overflow: hidden;
@@ -33,161 +46,108 @@ body{
 }
 
 img {
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.02);
 }
 
-ul{
-    margin: 0;
-    padding: 0;
-}
-
-.dark{
-    padding: 15px;
-    background: #F8F4E3;
-    color: #000000;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Header */
-header {
-    background: #FAF5EF;
-    color: #000000;
-    min-height:60px;
-    border-bottom: #FAF5EF 3px solid;
-}
-
-
-header a{
-    color: #000000;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-size:18px;
-}
-
-header li{
-    float: left;
-    display: flex;
-    padding: 0 20px 0 20px;
-    color: #000000;
-    margin-right: 0;
-    margin-bottom: 10px; /* Space between items */
-    display: inline-block;
-}
-
-header #branding{
-    float:left;
-    font-family: 'Coiny', cursive;
-    letter-spacing: 0.01em;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-header #branding h2 a{
+ul {
   margin: 0;
-  font-size: 70%;
+  padding: 0;
+  list-style: none;
 }
 
-header nav{
-  float: right;
-  margin-top: 10px; 
+.dark {
+  padding: 15px;
+  background: #F8F4E3;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-header .highlight, header .current a{
-    color: #000000;
-    font-weight: bold;
+/* Header - Now using flexbox */
+header {
+  background: #FAF5EF;
+  color: #000000;
+  min-height: 60px;
+  border-bottom: #FAF5EF 3px solid;
+  width: 100%;
 }
 
-header a:hover{
-    color:  #F8C246;
-    font-weight: bold;
-}
-
-header .highlight{
-    color: #000000;
-}
-
-.nav-container {
+.resource-container {
   width: 80%;
-  margin: auto;
-  transition: box-shadow 0.3s ease;
-  padding: 0.1rem;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Boxes */
-
-#boxes{
-    margin-top: 20px;
+header a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
-#boxes .box{
-    float: left;
-    text-align: center;
-    width: 30%;
-    padding: 10px;
+header #branding {
+  font-family: 'Coiny', cursive;
+  letter-spacing: 0.01em;
+  padding: 10px 0;
 }
 
-#boxes .box img{
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}    
-
-#boxes .box img:hover {
-    transform: scale(1.02);
+header #branding h2 {
+  margin: 0;
+  font-weight: bold;
 }
 
-/* Sidebar */
-aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 10px;
+header #branding h2 a {
+  margin: 0;
+  font-size: 38px;
 }
 
-aside#sidebar .quote input, aside#sidebar quote textarea{
-    width: 90%;
-    padding: 5px;
+header nav {
+  display: flex;
+  align-items: center;
 }
 
-#sidebar img {
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-
-  #sidebar img:hover {
-    transform: scale(1.02);
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+header li {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
 
-/* Dropdown Container */
+header .highlight, header .current a {
+  color: #000000;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #F8C246;
+  font-weight: bold;
+}
+
+/* Dropdown Styling */
 .simple-dropdown {
   position: relative;
-  display: inline-block;
 }
 
-/* Dropdown Button (styled like a nav link) */
 .simple-dropdown .dropbtn {
-  /* This should match your existing nav link styling */
-  display: inline-block;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-items {
   display: none;
   position: absolute;
@@ -196,305 +156,418 @@ aside#sidebar .quote input, aside#sidebar quote textarea{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1000;
   border-radius: 4px;
-  top: 100%; 
+  top: 100%;
   left: 0;
-  /* Fix for cut-off dropdown */
-  max-height: none; 
-  overflow: visible; 
+  max-height: none;
+  overflow: visible;
 }
 
-/* Links inside the Dropdown */
 .dropdown-items a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  white-space: nowrap; 
+  white-space: nowrap;
+  border-bottom: 1px solid #f1f1f1;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-items a:hover {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 .simple-dropdown:hover .dropdown-items {
   display: block;
 }
 
-/* Fix for container constraints */
-ul, nav {
-  overflow: visible !important; 
+/* Boxes */
+#boxes {
+  margin-top: 20px;
 }
+
+#boxes .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+#boxes .box {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  min-width: 0; /* Allows boxes to shrink below content size if needed */
+}
+
+#boxes .box img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Maintains aspect ratio while filling container */
+}    
+
+#boxes .box img:hover {
+  transform: scale(1.02);
+}
+
+/* Sidebar */
+aside#sidebar {
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+#sidebar img {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#sidebar img:hover {
+  transform: scale(1.02);
+}
+
 /* Services */
-
-ul#services li{
-    list-style: none;
-    padding: 20px;
-    border: #cccccc solid 1px;
-    margin-bottom: 5px;
-    background: #e6e6e6;
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
 }
 
-footer{
-    padding: 20px;
-    margin-top: 20px;
-    color: #000000;
-    background-color: #3FA1C8;
-    text-align: center;
-    font-size: 20px;
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #000000;
+  background-color: #3FA1C8;
+  text-align: center;
+  font-size: 20px;
 }
 
-
-/* form */
-
+/* Form */
 input {
-    background-color: white;
-    width: 70%;
-    margin-left: 12%;
-    font-size: 20px;
-    padding: 16px 16px;
-    border-radius: 10px;
-    border-color: black;
-    margin-bottom: 20px;
+  background-color: white;
+  width: 70%;
+  margin-left: 12%;
+  font-size: 20px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 20px;
 }
 
 textarea {
-    background-color: white;
-    width: 70%;
-    margin-left: 12%;
-    font-size: 20px;
-    padding: 16px 16px;
-    border-radius: 10px;
-    border-color: black;
-    margin-bottom: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif
+  background-color: white;
+  width: 70%;
+  margin-left: 12%;
+  font-size: 20px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 input:focus-within {
-    outline: none;
-    border-color: #4356ff ;
-    border-width: 3px;
+  outline: none;
+  border-color: #4356ff;
+  border-width: 3px;
 }
 
 textarea:focus-within {
-    outline: none;
-    border-color: #4356ff ;
-    border-width: 3px;
+  outline: none;
+  border-color: #4356ff;
+  border-width: 3px;
 }
 
 button {
-    background-color: orange ;
-    border-radius: 20px;
-    border-color: black;
-    font-size: 22px;
-    padding: 10px 18px;
-    text-align: center;
-    display: flex;
-    margin: auto;
+  background-color: orange;
+  border-radius: 20px;
+  border-color: black;
+  font-size: 22px;
+  padding: 10px 18px;
+  text-align: center;
+  display: flex;
+  margin: auto;
 }
 
 button:hover {
-    opacity: 80%;
-    cursor: pointer;
+  opacity: 80%;
+  cursor: pointer;
 }
 
 /* Hero Section */
-
 .hero-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
 
 .hero-text {
-    flex: 1;
+  flex: 1;
 }
 
 .hero-text h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #1f2937;
-    font-family: 'Coiny', cursive;
-    letter-spacing: 0.01em;
-    font-size: 140px;
-    font-weight: bold;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-family: 'Coiny', cursive;
+  letter-spacing: 0.01em;
+  font-size: 140px;
+  font-weight: bold;
 }
 
 .hero-text p {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 30px;
 }
 
 .hero-image {
-    flex: 1;
-    max-width: auto;
-    height: auto;
+  flex: 1;
+  max-width: auto;
+  height: auto;
 }
 
 .hero-image img {
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-    max-width: 100%;
-    max-height: 40%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  max-width: 100%;
+  max-height: 40%;
 }
 
 .hero-image img:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
-/* media queries */
-@media(max-width: 768px) {
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar{
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
+/* Beagle Resources Section */
+.beagle-pros-cons {
+  font-family: Arial, sans-serif;
+  margin: 50px auto 0;
+  padding: 14px;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
 
-    header{
-        padding-bottom: 20px;
-        font-size: 12px;
-    }
+.beagle-pros-cons h2 {
+  margin-top: 0;
+}
 
-    #showcase h1{
-        margin-top: 40px;
-        display: block;
-    }
+/* Call to action button */
+.paw-button-container {
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  margin: 20px 0;
+}
 
-    header #branding h1{
-      margin: 0;
-      font-size: 58px;
-      float: center;
-    }
+.paw-button {
+  position: relative;
+  background: linear-gradient(145deg, #ff6b6b, #ff9e4a);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 40px 15px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    #news.letter button, .quote button{
-        display: block;
-        width: 100%;
-    }
+.paw-button:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z'/%3E%3C/svg%3E") no-repeat center center;
+  background-size: contain;
+}
 
-    #newsletter form input[type="email"], .quote input, .quote textarea{
-        width: 100%;
-        margin-bottom: 5px;
-    } 
+.paw-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(255, 107, 107, 0.6);
+  padding-right: 45px;
+}
 
-    .simple-dropdown .dropdown-items {
-      position: static; /* Change from absolute to static */
-      width: 100%;
-      display: none;
-      box-shadow: none;
-      background-color: #f8f8f8; /* Slightly different shade to indicate nesting */
-    }
-    
-    .simple-dropdown.active .dropdown-items {
-      display: block; /* Show when parent has active class */
-    }
-    
-    /* Style dropdown items in mobile view */
-    .simple-dropdown .dropdown-items a {
-      padding: 10px;
+.paw-button:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'/%3E%3C/svg%3E") no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.paw-button:hover:after {
+  right: 15px;
+  opacity: 1;
+}
+
+.paw-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+/* Mobile Responsive Styles */
+@media(max-width: 992px) {
+  .hero-content {
+      flex-direction: column;
+  }
+  
+  .hero-text {
       text-align: center;
-      border-top: 1px solid #e7e7e7;
-    }
-    
-    /* Add toggle indicator to dropdown button */
-    .simple-dropdown .dropbtn:after {
+      margin-bottom: 40px;
+  }
+  
+  .cta-content h2 {
+      font-size: 2rem;
+  }
+
+  #boxes .box {
+      width: 45%;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Header mobile styling */
+  .resource-container {
+      width: 95%;
+      flex-direction: column;
+      padding: 10px;
+  }
+  
+  header {
+      padding-bottom: 10px;
+  }
+  
+  header #branding {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+  }
+  
+  header #branding h2 a {
+      font-size: 32px;
+  }
+  
+  header nav {
+      width: 100%;
+      justify-content: center;
+  }
+  
+  header nav ul {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+  }
+  
+  header nav li {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+  }
+  
+  /* Dropdown mobile styling */
+  .simple-dropdown {
+      position: relative;
+      width: 100%;
+  }
+  
+  .dropdown-items {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      margin: 5px 0;
+      background-color: #f5f5f5;
+  }
+  
+  .dropdown-items a {
+      padding: 8px;
+      text-align: center;
+  }
+  
+  /* Add a dropdown indicator */
+  .simple-dropdown .dropbtn:after {
       content: " ▼";
       font-size: 0.8em;
-    }
-    
-    .simple-dropdown.active .dropbtn:after {
-      content: " ▲";
-    }
+  }
+  
+  .hero-text h1 {
+      font-size: 3rem;
+  }
+  
+  
+  /* Adjust box layout for mobile */
+  #boxes .container {
+      flex-direction: column;
+      gap: 30px;
+  }
+  
+  #boxes .box {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  
+  /* Make sidebar full width */
+  aside#sidebar {
+      width: 100%;
+  }
+  
+  /* Form adjustments */
+  input, textarea {
+      width: 90%;
+      margin-left: 5%;
+  }
 }
 
-    /* NEWER CODE*/
-    /* Responsive Styles */
-@media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .hero-text {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .cta-content h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-    
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .nav-menu.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-    }
-    
-    .hero-text h1 {
-        font-size: 5.0rem;
-    }
-    
-    .section-header h2,
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn-secondary {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-    
-    .hero-text h1 {
-        font-size: 4.2rem;
-    }
-    
-    .feature-card {
-        padding: 20px;
-    }
-
+@media(max-width: 576px) {
+  .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .btn-secondary {
+      margin-left: 0;
+      margin-top: 15px;
+  }
+  
+  .hero-text h1 {
+      font-size: 2.5rem;
+  }
+  
+  .container, .landingpage-container {
+      width: 95%;
+  }
+  
+  header #branding h2 a {
+      font-size: 28px;
+  }
 }
 
 /* call to action */
