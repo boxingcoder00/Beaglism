@@ -347,6 +347,8 @@ button:hover {
   font-size: 2.5rem;
   color: #000000;
   margin-bottom: 30px;
+  line-height: 1.6; 
+  margin-bottom: 1.5em;
 }
 
 .hero-image {
@@ -1182,7 +1184,7 @@ nav ul li {
   /* beagle nutrition */
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin: 0 0 15px 0;
     text-align: center;
     color: #3FA1C8;
@@ -1786,3 +1788,18 @@ nav ul li {
                 margin-left: -100px;
             }
         }
+
+        /* Beaglism news */
+
+       #main p {
+          line-height: 1.6; 
+          margin-bottom: 1.5em;
+          font-size: clamp(16px, 2.5vw, 18px); 
+          color: #333;
+       }
+
+       #main img{
+          
+       }
+
+  
