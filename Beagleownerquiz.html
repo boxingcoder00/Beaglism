@@ -1,0 +1,230 @@
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KHGGNW1B9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KHGGNW1B9');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with the latest beaglism news, beagle care tips, and community events from Beagism. Discover specific articles, updates, and advice to keep your beagle happy and healthy.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Beaglism -  A movement to spread awareness on our beloved dog breed | Beaglism.com</title>
+    <link rel="canonical" href="https://www.beaglism.com/BeagleNews">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="resource-container">
+            <div id="branding">
+                <h2><a href="./">Beaglism</a></h2>
+            </div>
+            <nav>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/BeagleNews">Beaglism news</a></li>
+                  <li><a href="/About">About us</a></li>
+                  <li class="simple-dropdown">
+                    <a href="/BeagleResources" class="dropbtn">Beagle Resources</a>
+                    <div class="dropdown-items">
+                       <a href="Resources/BeagleTraining">Training Tips</a>
+                        <a href="Resources/BeagleNutrition">Beagle Nutrition</a>
+                        <a href="Resources/BeagleAndTheSun">Beagles and the sun</a>
+                        <a href="Resources/BeaglepPro&cons">Beagle Pros & Cons</a>
+                        <a href="Resources/Beaglegrooming">Beagle Grooming</a>
+                        <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
+                        <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
+                        <a href="Resources/Beaglefavoritequotes">Top 5 Beagle quotes!</a>
+                        <a href="Resources/Beagleproofing">Beagle proof your house!</a>
+                  </div>
+                </li>
+                <li><a href="/Support">Spread Awareness</a></li>
+                <li class="current"><a href="/Beagleownerquiz">What beagle owner are you ?</a></li>
+                <li><a href="/Contact">Contact us</a></li>
+                <li><a href="/credits">Credits</a></li>
+            </nav>
+        </div>
+    </header>
+
+
+
+<body>
+    <div class="beagle-quiz-wrapper">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1 class="quiz-title">🐕 What Type of Beagle Owner Are You?</h1>
+                <p class="quiz-subtitle">Discover your beagle parenting style!</p>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            
+            <div id="quiz-content">
+                <!-- Questions will be inserted here -->
+            </div>
+            
+            <div class="result-container" id="result-container">
+                <h2 class="result-title" id="result-title"></h2>
+                <p class="result-description" id="result-description"></p>
+                <button class="restart-btn" onclick="restartQuiz()">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "It's 6 AM and your beagle is howling. What's your reaction?",
+                answers: [
+                    { text: "Jump up immediately - they must need something important!", type: "devoted" },
+                    { text: "Groan and check if it's an emergency, then back to bed", type: "practical" },
+                    { text: "Put in earplugs - they'll stop eventually", type: "relaxed" },
+                    { text: "Start howling back - if you can't beat them, join them!", type: "playful" }
+                ]
+            },
+            {
+                question: "Your beagle discovers a 'treasure' (aka garbage) on your walk. You:",
+                answers: [
+                    { text: "Immediately redirect with treats and praise", type: "devoted" },
+                    { text: "Firmly say 'no' and continue walking", type: "practical" },
+                    { text: "Let them investigate briefly, then move on", type: "relaxed" },
+                    { text: "Take a photo because it's hilarious", type: "playful" }
+                ]
+            },
+            {
+                question: "How do you handle your beagle's food obsession?",
+                answers: [
+                    { text: "Carefully measured portions, scheduled feeding times", type: "practical" },
+                    { text: "Whatever makes them happy - extra treats included!", type: "devoted" },
+                    { text: "They get fed when they get fed", type: "relaxed" },
+                    { text: "Turn it into games and puzzles", type: "playful" }
+                ]
+            },
+            {
+                question: "Your beagle has destroyed your favorite shoes. Your response:",
+                answers: [
+                    { text: "Analyze what you did wrong - not enough exercise? Boredom?", type: "devoted" },
+                    { text: "Hide shoes better and buy chew toys", type: "practical" },
+                    { text: "Shrug it off - shoes are replaceable", type: "relaxed" },
+                    { text: "Laugh and post the destruction on social media", type: "playful" }
+                ]
+            },
+            {
+                question: "How much research did you do before getting your beagle?",
+                answers: [
+                    { text: "Months of research, breed books, breeder interviews", type: "devoted" },
+                    { text: "Read up on basic care and training needs", type: "practical" },
+                    { text: "Knew they were cute and friendly - good enough!", type: "relaxed" },
+                    { text: "Fell in love with their personality and went for it", type: "playful" }
+                ]
+            },
+            {
+                question: "Your ideal beagle adventure is:",
+                answers: [
+                    { text: "A structured hike with proper gear and planning", type: "practical" },
+                    { text: "Whatever makes my beagle happiest", type: "devoted" },
+                    { text: "A casual walk around the neighborhood", type: "relaxed" },
+                    { text: "Exploring new places and letting them lead", type: "playful" }
+                ]
+            }
+        ];
+
+        const results = {
+            devoted: {
+                title: "The Devoted Beagle Parent 💖",
+                description: "You're the ultimate beagle parent! Your dog is your world, and you'd do anything for their happiness and wellbeing. You know every beagle quirk, have researched every health concern, and probably have more photos of your dog than yourself. Your beagle is living their best life thanks to your dedication!"
+            },
+            practical: {
+                title: "The Practical Beagle Owner 🎯",
+                description: "You love your beagle deeply but maintain a balanced approach. You've done your homework, stick to routines, and handle challenges with common sense. You're the type who has a well-trained beagle because you're consistent and fair. Your friends come to you for dog advice!"
+            },
+            relaxed: {
+                title: "The Chill Beagle Companion 😎",
+                description: "You and your beagle are perfectly matched in your laid-back approach to life. You don't stress about the small stuff, and your beagle appreciates your relaxed energy. While others panic about minor issues, you roll with the punches and enjoy the simple pleasures of beagle ownership."
+            },
+            playful: {
+                title: "The Fun-Loving Beagle Buddy 🎾",
+                description: "Life with your beagle is one big adventure! You embrace their silly side, turn everything into a game, and probably laugh more than anyone else at your dog's antics. Your social media is full of hilarious beagle moments, and you're always up for trying new activities together."
+            }
+        };
+
+        let currentQuestion = 0;
+        let scores = { devoted: 0, practical: 0, relaxed: 0, playful: 0 };
+
+        function startQuiz() {
+            currentQuestion = 0;
+            scores = { devoted: 0, practical: 0, relaxed: 0, playful: 0 };
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const quizContent = document.getElementById('quiz-content');
+            const progressBar = document.getElementById('progressBar');
+            
+            if (currentQuestion < questions.length) {
+                const question = questions[currentQuestion];
+                const progress = ((currentQuestion) / questions.length) * 100;
+                progressBar.style.width = progress + '%';
+                
+                quizContent.innerHTML = `
+                    <div class="question-container active">
+                        <div class="question-number">Question ${currentQuestion + 1} of ${questions.length}</div>
+                        <div class="question">${question.question}</div>
+                        <div class="answers">
+                            ${question.answers.map((answer, index) => `
+                                <div class="answer-btn" onclick="selectAnswer('${answer.type}')">
+                                    ${answer.text}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                showResult();
+            }
+        }
+
+        function selectAnswer(type) {
+            scores[type]++;
+            currentQuestion++;
+            
+            setTimeout(() => {
+                showQuestion();
+            }, 300);
+        }
+
+        function showResult() {
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = '100%';
+            
+            const maxScore = Math.max(...Object.values(scores));
+            const resultType = Object.keys(scores).find(key => scores[key] === maxScore);
+            const result = results[resultType];
+            
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('result-title').textContent = result.title;
+            document.getElementById('result-description').textContent = result.description;
+            document.getElementById('result-container').style.display = 'block';
+        }
+
+        function restartQuiz() {
+            document.getElementById('result-container').style.display = 'none';
+            document.getElementById('quiz-content').style.display = 'block';
+            startQuiz();
+        }
+
+        // Start the quiz when page loads
+        startQuiz();
+    </script>
+</body>
+</html>
