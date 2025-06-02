@@ -465,7 +465,7 @@ header a:hover {
         
         .beagle-quiz-wrapper {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, white 0%, white 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -632,6 +632,16 @@ header a:hover {
             display: none;
             text-align: center;
             animation: beagle-quiz-fadeIn 0.8s ease-out;
+        }
+        
+        .beagle-quiz-wrapper .result-gif {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 0 auto 25px auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #ffffff;
+            object-fit: cover;
         }
         
         .beagle-quiz-wrapper .result-title {

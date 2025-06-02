@@ -74,6 +74,7 @@
             </div>
             
             <div class="result-container" id="result-container">
+                <img class="result-gif" id="result-gif" src="" alt="Beagle GIF" style="display: none;">
                 <h2 class="result-title" id="result-title"></h2>
                 <p class="result-description" id="result-description"></p>
                 <button class="restart-btn" onclick="restartQuiz()">Take Quiz Again</button>
@@ -142,19 +143,23 @@
         const results = {
             devoted: {
                 title: "The Devoted Beagle Parent 💖",
-                description: "You're the ultimate beagle parent! Your dog is your world, and you'd do anything for their happiness and wellbeing. You know every beagle quirk, have researched every health concern, and probably have more photos of your dog than yourself. Your beagle is living their best life thanks to your dedication!"
+                description: "You're the ultimate beagle parent! Your dog is your world, and you'd do anything for their happiness and wellbeing. You know every beagle quirk, have researched every health concern, and probably have more photos of your dog than yourself. Your beagle is living their best life thanks to your dedication!",
+                gif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHNnZTcyYTBwcW5taHRsdnI4dDd0MnF6am15M3lrN2pjamFsdHl2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kF0fiO87NK3SfIR5QW/giphy.gif"
             },
             practical: {
                 title: "The Practical Beagle Owner 🎯",
-                description: "You love your beagle deeply but maintain a balanced approach. You've done your homework, stick to routines, and handle challenges with common sense. You're the type who has a well-trained beagle because you're consistent and fair. Your friends come to you for dog advice!"
+                description: "You love your beagle deeply but maintain a balanced approach. You've done your homework, stick to routines, and handle challenges with common sense. You're the type who has a well-trained beagle because you're consistent and fair. Your friends come to you for dog advice!",
+                gif: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnRjZ2wxY3EzdG0wdmtoZjFxdGczdmxsZDlqMHhlZTI5djZyY3UyNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1jX9kZXyJIW0xbYlV0/giphy.gif"
             },
             relaxed: {
                 title: "The Chill Beagle Companion 😎",
-                description: "You and your beagle are perfectly matched in your laid-back approach to life. You don't stress about the small stuff, and your beagle appreciates your relaxed energy. While others panic about minor issues, you roll with the punches and enjoy the simple pleasures of beagle ownership."
+                description: "You and your beagle are perfectly matched in your laid-back approach to life. You don't stress about the small stuff, and your beagle appreciates your relaxed energy. While others panic about minor issues, you roll with the punches and enjoy the simple pleasures of beagle ownership.",
+                gif: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI1MXJ0YmdlMzAyaWN0YmNldDRsNTEzN2p1MmU5bm1ld2h4bTBnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X99cYLaKzA64IIv8I1/giphy.gif"
             },
             playful: {
                 title: "The Fun-Loving Beagle Buddy 🎾",
-                description: "Life with your beagle is one big adventure! You embrace their silly side, turn everything into a game, and probably laugh more than anyone else at your dog's antics. Your social media is full of hilarious beagle moments, and you're always up for trying new activities together."
+                description: "Life with your beagle is one big adventure! You embrace their silly side, turn everything into a game, and probably laugh more than anyone else at your dog's antics. Your social media is full of hilarious beagle moments, and you're always up for trying new activities together.",
+                gif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzhqb2FxNXNwM3A2aGIzamd0bmdveTNyNnVyYnl0NmtlZmVjbXB1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TEe2v5SL6aCdi/giphy.gif"
             }
         };
 
@@ -212,8 +217,18 @@
             const result = results[resultType];
             
             document.getElementById('quiz-content').style.display = 'none';
-            document.getElementById('result-title').textContent = result.title;
-            document.getElementById('result-description').textContent = result.description;
+            
+            // Set up the GIF with a loading delay for dramatic effect
+            const gifElement = document.getElementById('result-gif');
+            gifElement.src = result.gif;
+            gifElement.style.display = 'block';
+            
+            // Add a small delay before showing text for better effect
+            setTimeout(() => {
+                document.getElementById('result-title').textContent = result.title;
+                document.getElementById('result-description').textContent = result.description;
+            }, 500);
+            
             document.getElementById('result-container').style.display = 'block';
         }
 
