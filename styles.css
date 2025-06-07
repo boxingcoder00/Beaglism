@@ -2,705 +2,630 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-h1 {
-    color: #000000;
-    text-align: center;
-    font-size: 1.7rem;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eaeaea;
-}
-
-/* Dropdown Container */
-.simple-dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Button (styled like a nav link) */
-  .simple-dropdown .dropbtn {
-    /* This should match your existing nav link styling */
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-items {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000;
-    border-radius: 4px;
-    top: 100%; 
-    left: 0;
-    /* Fix for cut-off dropdown */
-    max-height: none; 
-    overflow: visible; 
-  }
-  
-  /* Links inside the Dropdown */
-  .dropdown-items a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap; 
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-items a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .simple-dropdown:hover .dropdown-items {
-    display: block;
-  }
-  
-  /* Fix for container constraints */
-  ul, nav {
-    overflow: visible !important; 
-  }
-
-header {
-  background: #FAF5EF;
-  color: #000000;
-  min-height: 60px;
-  border-bottom: #FAF5EF 3px solid;
-  width: 100%;
-  justify-content: center; /* Center the header content */
-}
-
-.resource-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px; /* Add maximum width constraint */
-}
-
-header a {
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-header #branding {
-  font-family: 'Coiny', cursive;
-  letter-spacing: 0.01em;
-  padding: 10px 0;
-}
-
-header #branding h2 {
-  margin: 0;
-  font-weight: bold;
-}
-
-header #branding h2 a {
-  margin: 0;
-  font-size: 38px;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-}
-
-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-header li {
-  padding: 0 20px;
-  margin-bottom: 10px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-header .highlight, header .current a {
-  color: #000000;
-  font-weight: bold;
-}
-
-/* Enhanced hover effect combining both styles */
-header a:hover {
-  color: #F8C246;
-  font-weight: bold;
-}
-
-/* Improved dropdown styling with effects from both sources */
-.simple-dropdown {
-  position: relative;
-}
-
-.simple-dropdown .dropbtn {
-  cursor: pointer;
-  padding: 5px 8px; /* Add some padding for the background */
-}
-
-.simple-dropdown .dropbtn:hover {
-  background-color: rgba(241, 241, 241, 0.3); /* Light background on hover */
-  border-radius: 4px; /* Rounded corners */
-}
-
-.dropdown-items {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000;
-  border-radius: 4px;
-  top: 100%;
-  left: 0;
-  max-height: none;
-  overflow: visible;
-  animation: fadeIn 0.2s ease-in-out; /* Smooth animation for dropdown appearance */
-}
-
-/* Animation for dropdown appearance */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.dropdown-items a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  white-space: nowrap;
-  border-bottom: 1px solid #f1f1f1;
-  transition: all 0.2s ease; /* Smooth transition for hover effects */
-}
-
-/* Remove border from last item */
-.dropdown-items a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-items a:hover {
-  background-color: #f1f1f1;
-  color: #F8C246; /* Match header link hover color */
-  padding-left: 18px; /* Slight indent effect on hover */
-}
-
-.simple-dropdown:hover .dropdown-items {
-  display: block;
-}
-
-/* Mobile responsiveness improvements */
-@media screen and (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  header li {
-    padding: 10px 0;
-    width: 100%;
-  }
-  
-  .dropdown-items {
-    position: relative;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    margin-top: 10px;
-  }
-  
-  .resource-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  header nav {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-/*  beagle quotes */
-
-.quote-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .quote {
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-  
-  .author {
-    font-style: italic;
-    text-align: right;
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 1rem;
-  }
-  
-  .description {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #444;
-  }
-  
-  .description p {
-    margin-bottom: 15px;
-  }
-  
-  .fun-fact {
-    background-color: #f5f5f5;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    font-size: 0.95rem;
-    border-left: 3px solid #ddd;
-  }
-
-  footer{
-    padding: 20px;
-    margin-top: 20px;
-    color: #000000;
-    background-color: #3FA1C8;
-    text-align: center;
-    font-size: 20px;
-}
-  
-  @media (max-width: 600px) {
     body {
-        padding: 15px;
-    }
-    
-    .quote-card {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .quote {
-        font-size: 1.1rem;
-    }
-  }
-
-  .beagle-guide-container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.beagle-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eaeaea;
-}
-
-.beagle-title {
-    color: #000000;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    font: bold;
-}
-
-.beagle-subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    font-style: italic;
-}
-
-.beagle-timeline {
-    position: relative;
-}
-
-.beagle-timeline::before {
-    content: '';
-    position: absolute;
-    left: 18px;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background-color: #eaeaea;
-}
-
-.beagle-tip {
-    position: relative;
-    margin-bottom: 30px;
-    padding-left: 50px;
-}
-
-.beagle-tip-header {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.beagle-tip-number {
-    position: absolute;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    background-color: #f5f5f5;
-    border: 2px solid #eaeaea;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #000;
-    z-index: 1;
-}
-
-.beagle-tip-title {
-    font-size: 1.3rem;
-    color: #000000;
-    margin: 0;
-    padding-left: 10px;
-}
-
-.beagle-tip-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
-    border-left: 3px solid #eaeaea;
-}
-
-.beagle-tip-content p {
-    margin: 0;
-    line-height: 1.7;
-    color: #444;
-    font-size: 1rem;
-}
-
-/* Hover effects */
-.beagle-tip:hover .beagle-tip-number {
-    background-color: #f0e6d8;
-    border-color: #ddd;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    body {
-        padding: 15px;
-    }
-    
-    .beagle-guide-container {
-        padding: 20px;
-    }
-    
-    .beagle-title {
-        font-size: 1.5rem;
-    }
-    
-    .beagle-subtitle {
-        font-size: 1rem;
-    }
-    
-    .beagle-tip {
-        padding-left: 40px;
-    }
-    
-    .beagle-tip-title {
-        font-size: 1.1rem;
-    }
-    
-    .beagle-timeline::before {
-        left: 15px;
-    }
-    
-    .beagle-tip-number {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-    }
-    
-}
-
-       /* beagle quiz code */
-
-          .beagle-quiz-wrapper * {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .beagle-quiz-wrapper {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
+            color: #333;
+            line-height: 1.6;
         }
-        
-        .beagle-quiz-wrapper .quiz-container {
-            background: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-            padding: 50px;
+
+        .container {
             max-width: 700px;
-            width: 100%;
+            margin: 0 auto;
+        }
+
+         .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        h1 {
+            color: #000000;
             text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.7rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        /* Dropdown Container */
+        .simple-dropdown {
+            position: relative;
+            display: inline-block;
         }
         
-        .beagle-quiz-wrapper .quiz-header {
-            margin-bottom: 40px;
+        /* Dropdown Button (styled like a nav link) */
+        .simple-dropdown .dropbtn {
+            /* This should match your existing nav link styling */
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
         }
         
-        .beagle-quiz-wrapper .quiz-title {
-            font-size: 3em;
-            font-weight: 800;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
-            letter-spacing: -1px;
-        }
-        
-        .beagle-quiz-wrapper .quiz-subtitle {
-            color: #34495e;
-            font-size: 1.3em;
-            font-weight: 500;
-            opacity: 0.8;
-        }
-        
-        .beagle-quiz-wrapper .question-container {
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-items {
             display: none;
-            animation: beagle-quiz-fadeIn 0.6s ease-out;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 4px;
+            top: 100%; 
+            left: 0;
+            /* Fix for cut-off dropdown */
+            max-height: none; 
+            overflow: visible; 
         }
         
-        .beagle-quiz-wrapper .question-container.active {
+        /* Links inside the Dropdown */
+        .dropdown-items a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap; 
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-items a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Show the dropdown menu on hover */
+        .simple-dropdown:hover .dropdown-items {
             display: block;
         }
         
-        @keyframes beagle-quiz-fadeIn {
+        /* Fix for container constraints */
+        ul, nav {
+            overflow: visible !important; 
+        }
+
+        header {
+            background: #FAF5EF;
+            color: #000000;
+            min-height: 60px;
+            border-bottom: #FAF5EF 3px solid;
+            width: 100%;
+            justify-content: center; /* Center the header content */
+        }
+
+        .resource-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px; /* Add maximum width constraint */
+        }
+
+        header a {
+            color: #000000;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        header #branding {
+            font-family: 'Coiny', cursive;
+            letter-spacing: 0.01em;
+            padding: 10px 0;
+        }
+
+        header #branding h2 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        header #branding h2 a {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header li {
+            padding: 0 20px;
+            margin-bottom: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        header .highlight, header .current a {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* Enhanced hover effect combining both styles */
+        header a:hover {
+            color: #F8C246;
+            font-weight: bold;
+        }
+
+        /* Improved dropdown styling with effects from both sources */
+        .simple-dropdown {
+            position: relative;
+        }
+
+        .simple-dropdown .dropbtn {
+            cursor: pointer;
+            padding: 5px 8px; /* Add some padding for the background */
+        }
+
+        .simple-dropdown .dropbtn:hover {
+            background-color: rgba(241, 241, 241, 0.3); /* Light background on hover */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .dropdown-items {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 4px;
+            top: 100%;
+            left: 0;
+            max-height: none;
+            overflow: visible;
+            animation: fadeIn 0.2s ease-in-out; /* Smooth animation for dropdown appearance */
+        }
+
+        /* Animation for dropdown appearance */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dropdown-items a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            border-bottom: 1px solid #f1f1f1;
+            transition: all 0.2s ease; /* Smooth transition for hover effects */
+        }
+
+        /* Remove border from last item */
+        .dropdown-items a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-items a:hover {
+            background-color: #f1f1f1;
+            color: #F8C246; /* Match header link hover color */
+            padding-left: 18px; /* Slight indent effect on hover */
+        }
+
+        .simple-dropdown:hover .dropdown-items {
+            display: block;
+        }
+
+        /* HAMBURGER MENU STYLES */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: #000000;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background-color: #FAF5EF;
+            z-index: 1000;
+            padding: 80px 20px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav.active {
+            display: block;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        @keyframes slideInRight {
             from { 
-                opacity: 0; 
-                transform: translateY(30px) scale(0.95); 
+                opacity: 0;
+                transform: translateX(100%);
             }
             to { 
-                opacity: 1; 
-                transform: translateY(0) scale(1); 
+                opacity: 1;
+                transform: translateX(0);
             }
         }
-        
-        .beagle-quiz-wrapper .question-number {
-            color: #7f8c8d;
-            font-size: 1em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+
+        /* Mobile backdrop */
+        .mobile-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .mobile-backdrop.active {
+            display: block;
+            animation: fadeInBackdrop 0.3s ease-out;
+        }
+
+        @keyframes fadeInBackdrop {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav li {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 15px;
+        }
+
+        .mobile-nav a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #F8C246;
+        }
+
+        .mobile-dropdown-items {
+            display: none;
+            background-color: #f5f5f5;
+            margin-top: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .mobile-dropdown-items.active {
+            display: block;
+        }
+
+        .mobile-dropdown-items a {
+            font-size: 16px;
+            font-weight: normal;
+            padding: 12px 15px;
+            border-bottom: 1px solid #eaeaea;
+            color: #333;
+        }
+
+        .mobile-dropdown-items a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .mobile-dropdown-toggle::after {
+            content: '▼';
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-dropdown-toggle.active::after {
+            transform: rotate(180deg);
+        }
+
+        /* Mobile responsiveness improvements */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .resource-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            header #branding h2 a {
+                font-size: 28px;
+            }
+        }
+
+        /*  beagle quotes */
+        .quote-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
-        .beagle-quiz-wrapper .question {
-            font-size: 1.5em;
-            color: #2c3e50;
-            margin-bottom: 35px;
-            font-weight: 700;
+        .quote {
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
             line-height: 1.4;
         }
         
-        .beagle-quiz-wrapper .answers {
-            display: grid;
-            gap: 20px;
-            margin-bottom: 40px;
+        .author {
+            font-style: italic;
+            text-align: right;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
         }
         
-        .beagle-quiz-wrapper .answer-btn {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 3px solid #dee2e6;
-            padding: 25px 30px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-size: 1.1em;
-            font-weight: 600;
-            text-align: left;
-            color: #2c3e50;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .beagle-quiz-wrapper .answer-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .beagle-quiz-wrapper .answer-btn:hover {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-            border-color: #4ecdc4;
-            color: #ffffff;
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(78, 205, 196, 0.3);
-        }
-        
-        .beagle-quiz-wrapper .answer-btn:hover::before {
-            left: 100%;
-        }
-        
-        .beagle-quiz-wrapper .answer-btn:active {
-            transform: translateY(-2px) scale(0.98);
-        }
-        
-        .beagle-quiz-wrapper .progress-bar {
-            background: rgba(52, 73, 94, 0.1);
-            height: 12px;
-            border-radius: 6px;
-            margin-bottom: 40px;
-            overflow: hidden;
-            border: 2px solid rgba(52, 73, 94, 0.1);
-        }
-        
-        .beagle-quiz-wrapper .progress-fill {
-            background: linear-gradient(90deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
-            height: 100%;
-            width: 0%;
-            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border-radius: 4px;
-            position: relative;
-        }
-        
-        .beagle-quiz-wrapper .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: beagle-quiz-shimmer 2s infinite;
-        }
-        
-        @keyframes beagle-quiz-shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .beagle-quiz-wrapper .result-container {
-            display: none;
-            text-align: center;
-            animation: beagle-quiz-fadeIn 0.8s ease-out;
-        }
-        
-        .beagle-quiz-wrapper .result-gif {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
-            margin: 0 auto 25px auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border: 4px solid #ffffff;
-            object-fit: cover;
-        }
-        
-        .beagle-quiz-wrapper .result-title {
-            font-size: 2.5em;
-            font-weight: 800;
-            color: #2c3e50;
-            margin-bottom: 25px;
-            line-height: 1.2;
-        }
-        
-        .beagle-quiz-wrapper .result-description {
-            font-size: 1.2em;
-            color: #34495e;
+        .description {
+            margin-bottom: 15px;
+            font-size: 1rem;
             line-height: 1.7;
-            margin-bottom: 40px;
-            font-weight: 500;
+            color: #444;
         }
         
-        .beagle-quiz-wrapper .restart-btn {
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
-            color: #ffffff;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 30px;
-            font-size: 1.2em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .description p {
+            margin-bottom: 15px;
+        }
+        
+        .fun-fact {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            border-left: 3px solid #ddd;
+        }
+
+        footer{
+            padding: 20px;
+            margin-top: 20px;
+            color: #000000;
+            background-color: #3FA1C8;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .quote-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .quote {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Quiz Styles */
+        .beagle-quiz-wrapper {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .quiz-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .quiz-title {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .quiz-subtitle {
+            font-size: 1.2rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #e0e0e0;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .question-container {
+            padding: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .question-container.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .question-number {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
         }
-        
-        .beagle-quiz-wrapper .restart-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+
+        .question {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            font-weight: 600;
         }
-        
-        .beagle-quiz-wrapper .restart-btn:active {
-            transform: translateY(-1px) scale(1.02);
+
+        .answers {
+            display: grid;
+            gap: 15px;
         }
-        
-        /* Mobile responsive */
+
+        .answer-btn {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .answer-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .result-container {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .result-gif {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            border: 5px solid #667eea;
+        }
+
+        .result-title {
+            font-size: 2.2rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .result-description {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .restart-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .restart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
         @media (max-width: 768px) {
-            .beagle-quiz-wrapper .quiz-container {
-                padding: 30px 25px;
-                margin: 10px;
+            .quiz-title {
+                font-size: 2rem;
             }
             
-            .beagle-quiz-wrapper .quiz-title {
-                font-size: 2.2em;
+            .question {
+                font-size: 1.4rem;
             }
             
-            .beagle-quiz-wrapper .question {
-                font-size: 1.3em;
+            .quiz-container {
+                margin: 0 10px;
             }
             
-            .beagle-quiz-wrapper .answer-btn {
-                padding: 20px 25px;
-                font-size: 1em;
+            .question-container, .result-container {
+                padding: 30px 20px;
             }
         }

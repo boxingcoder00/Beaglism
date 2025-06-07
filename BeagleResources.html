@@ -25,8 +25,21 @@
     <header>
         <div class="resource-container">
             <div id="branding">
-              <h2><a href="./">Beaglism</a></h2>
+              <h2>
+                <a href="../">
+                <img src="logo.png" alt="Beaglism Logo" class="logo">
+                Beaglism
+                </a>
+            </h2>
             </div>
+            
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             <nav>
               <ul>
                 <li><a href="/">Home</a></li>
@@ -35,10 +48,10 @@
                 <li class="simple-dropdown">
                   <a href="BeagleResources.html" class="dropbtn">Beagle Resources</a>
                   <div class="dropdown-items">
-                  <a href="Resources/BeagleTraining">Training Tips</a>
+                    <a href="Resources/BeagleTraining">Training Tips</a>
                     <a href="Resources/BeagleNutrition">Beagle Nutrition</a>
                     <a href="Resources/BeagleAndTheSun">Beagles and the sun</a>
-                    <a href="Resources/BeaglepPro&cons">Beagle Pros & Cons</a>
+                    <a href="Resources/Beaglepro&cons">Beagle Pros & Cons</a>
                     <a href="Resources/Beaglegrooming">Beagle Grooming</a>
                     <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
                     <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
@@ -54,6 +67,36 @@
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/BeagleNews">Beaglism news</a></li>
+            <li><a href="/About">About us</a></li>
+            <li class="mobile-dropdown-toggle">
+                <a href="BeagleResources.html">Beagle Resources</a>
+            </li>
+            <div class="mobile-dropdown">
+                <li><a href="Resources/BeagleTraining">Training Tips</a></li>
+                <li><a href="Resources/BeagleNutrition">Beagle Nutrition</a></li>
+                <li><a href="Resources/BeagleAndTheSun">Beagles and the sun</a></li>
+                <li><a href="Resources/Beaglepro&cons">Beagle Pros & Cons</a></li>
+                <li><a href="Resources/Beaglegrooming">Beagle Grooming</a></li>
+                <li><a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a></li>
+                <li><a href="Resources/BeagleFunFacts">Beagle Fun facts!</a></li>
+                <li><a href="Resources/Beaglefavoritequotes">Top 5 Beagle quotes!</a></li>
+                <li><a href="Resources/Beagleproofing">Beagle proof your house!</a></li>
+            </div>
+            <li><a href="/Support">Spread Awareness</a></li>
+            <li><a href="/Beagleownerquiz">What beagle owner are you ?</a></li>
+            <li><a href="/Contact">Contact us</a></li>
+            <li><a href="/credits">Credits</a></li>
+        </ul>
+    </nav>
 
     <div class="resources-container">
         <!-- Breadcrumbs for navigation and SEO -->
@@ -106,8 +149,6 @@
             </div>
         </section>
         
-        <!-- Additional resource categories... -->
-        
         <!-- FAQ Section -->
         <section class="resource-category">
             <h2>Frequently Asked Questions</h2>
@@ -153,7 +194,7 @@
         <section class="cta-section">
             <h2>Need More Help?</h2>
             <p>Can't find what you're looking for? Your question hasn't been answered? Our team is here to help. Contact us for more information.</p>
-            <a href="/Contact" class="cta-button" style="display: inline-block; background-color: var(--primary-color); color: white; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">Contact Support</a>
+            <a href="/Contact" class="cta-button">Contact Support</a>
         </section>
     </div>
 
@@ -163,7 +204,41 @@
       <a href="https://www.facebook.com/profile.php?id=61573450586594"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://www.instagram.com/beagliiism/"><i class="fa-brands fa fa-instagram"></i></a>
       <a href="https://www.pinterest.com/beaglism/"><i class="fa-brands fa-pinterest"></i></a>
-  </footer>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+            const mobileDropdown = document.querySelector('.mobile-dropdown');
+
+            // Toggle mobile menu
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close mobile menu when clicking overlay
+            mobileOverlay.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Toggle mobile dropdown
+            mobileDropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                mobileDropdownToggle.classList.toggle('active');
+                mobileDropdown.style.display = mobileDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>

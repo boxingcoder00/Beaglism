@@ -26,8 +26,21 @@
     <header>
         <div class="resource-container">
             <div id="branding">
-                <h2><a href="./">Beaglism</a></h2>
+            <h2>
+            <a href="../">
+            <img src="logo.png" alt="Beaglism Logo" class="logo">
+            Beaglism
+            </a>
+            </h2>
             </div>
+            
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             <nav>
                 <ul>
                   <li><a href="/">Home</a></li>
@@ -39,7 +52,7 @@
                        <a href="Resources/BeagleTraining">Training Tips</a>
                         <a href="Resources/BeagleNutrition">Beagle Nutrition</a>
                         <a href="Resources/BeagleAndTheSun">Beagles and the sun</a>
-                        <a href="Resources/BeaglepPro&cons">Beagle Pros & Cons</a>
+                        <a href="Resources/Beaglep&cons">Beagle Pros & Cons</a>
                         <a href="Resources/Beaglegrooming">Beagle Grooming</a>
                         <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
                         <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
@@ -55,9 +68,38 @@
         </div>
     </header>
 
+    <!-- Mobile Navigation Backdrop -->
+    <div class="mobile-backdrop" onclick="toggleMobileMenu()"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/BeagleNews">Beaglism news</a></li>
+            <li><a href="/About">About us</a></li>
+            <li>
+                <div class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(this)">
+                    <a href="/BeagleResources">Beagle Resources</a>
+                </div>
+                <div class="mobile-dropdown-items">
+                    <a href="Resources/BeagleTraining">Training Tips</a>
+                    <a href="Resources/BeagleNutrition">Beagle Nutrition</a>
+                    <a href="Resources/BeagleAndTheSun">Beagles and the sun</a>
+                    <a href="Resources/Beaglep&cons">Beagle Pros & Cons</a>
+                    <a href="Resources/Beaglegrooming">Beagle Grooming</a>
+                    <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
+                    <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
+                    <a href="Resources/Beaglefavoritequotes">Top 5 Beagle quotes!</a>
+                    <a href="Resources/Beagleproofing">Beagle proof your house!</a>
+                </div>
+            </li>
+            <li><a href="/Support">Spread Awareness</a></li>
+            <li><a href="/Beagleownerquiz">What beagle owner are you ?</a></li>
+            <li><a href="/Contact">Contact us</a></li>
+            <li><a href="/credits">Credits</a></li>
+        </ul>
+    </div>
 
-
-<body>
     <div class="beagle-quiz-wrapper">
         <div class="quiz-container">
             <div class="quiz-header">
@@ -83,6 +125,36 @@
     </div>
 
     <script>
+        // Hamburger Menu Functions
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const backdrop = document.querySelector('.mobile-backdrop');
+            
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            backdrop.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function toggleMobileDropdown(element) {
+            const dropdownItems = element.nextElementSibling;
+            element.classList.toggle('active');
+            dropdownItems.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link (except dropdown toggle)
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!this.parentElement.classList.contains('mobile-dropdown-toggle')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Quiz functionality
         const questions = [
             {
                 question: "It's 6 AM and your beagle is howling. What's your reaction?",
