@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stay updated with the latest beaglism news, beagle care tips, and community events from Beagism. Discover specific articles, updates, and advice to keep your beagle happy and healthy.">
+    <meta name="description" content="Discover engaging beagle games and interactive tools! Generate perfect puppy names, test your beagle knowledge, and enjoy dog-themed activities.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Beaglism -  A movement to spread awareness on our beloved dog breed | Beaglism.com</title>
@@ -62,7 +62,7 @@
                   </div>
                 </li>
                 <li><a href="/Support">Spread Awareness</a></li>
-                <li class="current"><a href="/Beagleownerquiz">What beagle owner are you ?</a></li>
+                <li class="current"><a href="/Beaglegames">Interactive Beagle Games & Tools</a></li>
                 <li><a href="/Contact">Contact us</a></li>
                 <li><a href="/credits">Credits</a></li>
             </nav>
@@ -83,6 +83,7 @@
                     <a href="/BeagleResources">Beagle Resources</a>
                 </div>
                 <div class="mobile-dropdown-items">
+                    <a href="Resources/why-buy-a-beagle">Why You Should Adopt a Beagle: The Ultimate Guide</a>
                     <a href="Resources/BeagleTraining">Training Tips</a>
                     <a href="Resources/BeagleNutrition">Beagle Nutrition</a>
                     <a href="Resources/BeagleAndTheSun">Beagles and the sun</a>
@@ -95,7 +96,7 @@
                 </div>
             </li>
             <li><a href="/Support">Spread Awareness</a></li>
-            <li><a href="/Beagleownerquiz">What beagle owner are you ?</a></li>
+            <li><a href="/Beagleinteractivegames">Interactive Beagle Games & Tools</a></li>
             <li><a href="/Contact">Contact us</a></li>
             <li><a href="/credits">Credits</a></li>
         </ul>
@@ -313,6 +314,175 @@
 
         // Start the quiz when page loads
         startQuiz();
+    </script>
+</body>
+</html>
+
+<body>
+    <div class="beagle-generator">
+        <div class="beagle-generator__header">
+            <h1 class="beagle-generator__title">🐕 Beagle Name Generator</h1>
+            <p class="beagle-generator__subtitle">Find the perfect name for your adorable Beagle!</p>
+        </div>
+
+        <div class="beagle-generator__controls">
+            <div class="beagle-generator__gender-section">
+                <label class="beagle-generator__label">Choose Gender:</label>
+                <div class="beagle-generator__radio-group">
+                    <label class="beagle-generator__radio-option active" data-gender="any">
+                        <input type="radio" name="gender" value="any" class="beagle-generator__radio" checked>
+                        <span>Any</span>
+                    </label>
+                    <label class="beagle-generator__radio-option" data-gender="male">
+                        <input type="radio" name="gender" value="male" class="beagle-generator__radio">
+                        <span>Male</span>
+                    </label>
+                    <label class="beagle-generator__radio-option" data-gender="female">
+                        <input type="radio" name="gender" value="female" class="beagle-generator__radio">
+                        <span>Female</span>
+                    </label>
+                </div>
+            </div>
+
+            <button class="beagle-generator__button" id="generateBtn">
+                <span class="beagle-generator__paw-icon">🐾</span>
+                Generate Name
+                <span class="beagle-generator__paw-icon">🐾</span>
+            </button>
+        </div>
+
+        <div class="beagle-generator__result" id="result">
+            <div class="beagle-generator__result-label">Your Beagle's Perfect Name:</div>
+            <h2 class="beagle-generator__result-name" id="generatedName">Click Generate!</h2>
+        </div>
+    </div>
+
+    <script>
+        class BeagleNameGenerator {
+            constructor() {
+                this.maleNames = [
+                    'Charlie', 'Max', 'Cooper', 'Buddy', 'Rocky', 'Tucker', 'Bear', 'Duke', 
+                    'Zeus', 'Oliver', 'Jack', 'Leo', 'Milo', 'Toby', 'Benny', 'Scout',
+                    'Finn', 'Rusty', 'Scout', 'Bruno', 'Chester', 'Hank', 'Gus', 'Louie',
+                    'Murphy', 'Bandit', 'Copper', 'Hunter', 'Jasper', 'Baxter','Snoopy','Prince',
+                    'Kobe','Bo','Loki','Moose'
+                ];
+
+                this.femaleNames = [
+                    'Bella', 'Lucy', 'Daisy', 'Lola', 'Luna', 'Molly', 'Sadie', 'Sophie',
+                    'Chloe', 'Ruby', 'Penny', 'Rosie', 'Gracie', 'Stella', 'Lily', 'Zoe',
+                    'Maggie', 'Nala', 'Emma', 'Honey', 'Ginger', 'Hazel', 'Piper', 'Maya',
+                    'Willow', 'Bonnie', 'Pepper', 'Dixie', 'Olive', 'Pearl', 'Lady' , 'Josie', 'Princes',
+                    'Elsa','Bonnie'
+                ];
+
+                this.allNames = [...this.maleNames, ...this.femaleNames];
+                this.usedNames = [];
+                this.currentGender = 'any';
+
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+            }
+
+            bindEvents() {
+                // Gender selection
+                const radioOptions = document.querySelectorAll('.beagle-generator__radio-option');
+                radioOptions.forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        this.handleGenderChange(e.currentTarget);
+                    });
+                });
+
+                // Generate button
+                const generateBtn = document.getElementById('generateBtn');
+                generateBtn.addEventListener('click', () => {
+                    this.generateName();
+                });
+
+                // Allow Enter key to generate
+                document.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.generateName();
+                    }
+                });
+            }
+
+            handleGenderChange(selectedOption) {
+                // Remove active class from all options
+                document.querySelectorAll('.beagle-generator__radio-option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+
+                // Add active class to selected option
+                selectedOption.classList.add('active');
+
+                // Update radio button
+                const radio = selectedOption.querySelector('input');
+                radio.checked = true;
+
+                // Update current gender
+                this.currentGender = radio.value;
+
+                // Reset used names when gender changes
+                this.usedNames = [];
+            }
+
+            getNamePool() {
+                switch (this.currentGender) {
+                    case 'male':
+                        return this.maleNames;
+                    case 'female':
+                        return this.femaleNames;
+                    default:
+                        return this.allNames;
+                }
+            }
+
+            generateName() {
+                const namePool = this.getNamePool();
+                let availableNames = namePool.filter(name => !this.usedNames.includes(name));
+
+                // Reset if all names have been used
+                if (availableNames.length === 0) {
+                    this.usedNames = [];
+                    availableNames = namePool;
+                }
+
+                // Generate random name
+                const randomIndex = Math.floor(Math.random() * availableNames.length);
+                const selectedName = availableNames[randomIndex];
+
+                // Add to used names
+                this.usedNames.push(selectedName);
+
+                // Display the name with animation
+                this.displayName(selectedName);
+            }
+
+            displayName(name) {
+                const nameElement = document.getElementById('generatedName');
+                const resultElement = document.getElementById('result');
+
+                // Add animation class
+                resultElement.style.transform = 'scale(0.95)';
+                resultElement.style.opacity = '0.7';
+
+                setTimeout(() => {
+                    nameElement.textContent = name;
+                    resultElement.style.transform = 'scale(1)';
+                    resultElement.style.opacity = '1';
+                    resultElement.style.transition = 'all 0.3s ease';
+                }, 150);
+            }
+        }
+
+        // Initialize the generator when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new BeagleNameGenerator();
+        });
     </script>
 </body>
 </html>
