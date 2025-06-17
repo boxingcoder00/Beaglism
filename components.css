@@ -5,7 +5,7 @@
 
         body {
                     font-family: Arial, sans-serif;
-                    background-color: #f9f9f9;
+                    background-color: #fdfdfd;
                     margin: 0;
                     padding: 20px;
                     color: #333;
@@ -525,6 +525,39 @@
                 .logo {
                     height: 40px;
                     width: auto;
+                }
+
+                .header-container p{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 23px;
+                    font-family: 'Open Sans', sans-serif;
+                    color: white;
+                }
+
+                .header-container{
+                    background-color: #92400e;
+                    padding: 1rem 0;
+                }
+
+                .header-container h1 {
+                        color: white;
+                        border-bottom: 0px solid #eaeaea;
+                }
+
+                    @media screen and (max-width: 480px) {
+                    .header-container p{
+                    padding: 10px;
+                    font-size: clamp(20px, 2.5vw, 18px); 
+                    }
+
+                    .header-container p{
+                    display: flex;
+                    justify-content: center;
+                    font-size: 0.9rem;
+                    font-family: 'Open Sans', sans-serif;
+                    color: white;
+                    }
                 }
 
                 /* Mobile responsiveness */
