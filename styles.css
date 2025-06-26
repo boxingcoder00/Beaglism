@@ -1000,3 +1000,144 @@
                     color: white;
                     }
                 }
+
+                     .training-guide-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .training-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8B4513;
+        }
+        
+        .training-main-title {
+            font-size: 28px;
+            color: #2C1810;
+            margin-bottom: 10px;
+        }
+        
+        .training-subtitle {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .training-tips-list {
+            margin-bottom: 40px;
+        }
+        
+        .training-tip-item {
+            background: #f9f9f9;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #8B4513;
+            padding: 20px;
+        }
+        
+        .training-tip-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+        
+        .training-tip-number {
+            background: #8B4513;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .training-tip-title {
+            font-size: 20px;
+            color: #2C1810;
+            margin: 0;
+        }
+        
+        .training-tip-content p {
+            margin: 0;
+            color: #444;
+        }
+        
+        .training-footer {
+            background: #2C1810;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .training-quote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+        
+        .training-footer p {
+            margin: 0;
+            color: #ccc;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .training-guide-wrapper {
+                padding: 15px;
+            }
+            
+            .training-main-title {
+                font-size: 24px;
+            }
+            
+            .training-tip-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .training-tip-title {
+                font-size: 18px;
+            }
+            
+            .training-tip-item {
+                padding: 15px;
+            }
+            
+            .training-footer {
+                padding: 20px;
+            }
+            
+            .training-quote {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .training-main-title {
+                font-size: 20px;
+            }
+            
+            .training-tip-title {
+                font-size: 16px;
+            }
+            
+            .training-tip-number {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+        }
