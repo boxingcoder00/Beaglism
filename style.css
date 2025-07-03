@@ -2158,4 +2158,210 @@ nav ul li {
           color: #333;
        }
 
+       .archives-component-wrapper-9847 {
+            all: initial;
+            font-family: Arial, sans-serif !important;
+            line-height: 1.6 !important;
+            color: #333 !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+            padding: 20px !important;
+            background: #f9f9f9 !important;
+            border-radius: 8px !important;
+            box-sizing: border-box !important;
+            display: block !important;
+            position: relative !important;
+        }
+
+        .archives-component-wrapper-9847 *,
+        .archives-component-wrapper-9847 *::before,
+        .archives-component-wrapper-9847 *::after {
+            box-sizing: border-box !important;
+        }
+
+        .archives-comp-header-9847 {
+            text-align: center !important;
+            margin: 0 0 40px 0 !important;
+            padding: 20px !important;
+            background: white !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            display: block !important;
+        }
+
+        .archives-comp-header-9847 h1 {
+            color: #2c3e50 !important;
+            margin: 0 0 10px 0 !important;
+            font-size: 28px !important;
+            font-weight: bold !important;
+            font-family: Arial, sans-serif !important;
+            line-height: 1.2 !important;
+            display: block !important;
+        }
+
+        .archives-comp-header-9847 p {
+            color: #666 !important;
+            font-size: 16px !important;
+            margin: 0 !important;
+            font-family: Arial, sans-serif !important;
+            line-height: 1.4 !important;
+            display: block !important;
+        }
+
+        .archives-comp-search-box-9847 {
+            margin: 0 0 30px 0 !important;
+            text-align: center !important;
+            display: block !important;
+        }
+
+        .archives-comp-search-input-9847 {
+            width: 100% !important;
+            max-width: 400px !important;
+            padding: 12px !important;
+            border: 2px solid #ddd !important;
+            border-radius: 6px !important;
+            font-size: 16px !important;
+            font-family: Arial, sans-serif !important;
+            background: white !important;
+            color: #333 !important;
+            outline: none !important;
+            box-sizing: border-box !important;
+            display: inline-block !important;
+        }
+
+        .archives-comp-search-input-9847:focus {
+            border-color: #3498db !important;
+        }
+
+        .archives-comp-list-9847 {
+            background: white !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important;
+            display: block !important;
+        }
+
+        .archives-comp-item-9847 {
+            padding: 20px !important;
+            border-bottom: 1px solid #eee !important;
+            display: block !important;
+            margin: 0 !important;
+        }
+
+        .archives-comp-item-9847:last-child {
+            border-bottom: none !important;
+        }
+
+        .archives-comp-date-9847 {
+            color: #666 !important;
+            font-size: 14px !important;
+            margin: 0 0 5px 0 !important;
+            font-family: Arial, sans-serif !important;
+            display: block !important;
+        }
+
+        .archives-comp-title-9847 {
+            font-size: 20px !important;
+            margin: 0 0 8px 0 !important;
+            font-weight: bold !important;
+            font-family: Arial, sans-serif !important;
+            line-height: 1.3 !important;
+            display: block !important;
+        }
+
+        .archives-comp-title-9847 a {
+            color: #2c3e50 !important;
+            text-decoration: none !important;
+            font-family: Arial, sans-serif !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+        }
+
+        .archives-comp-title-9847 a:hover {
+            color: #3498db !important;
+        }
+
+        .archives-comp-category-9847 {
+            display: inline-block !important;
+            background: #3498db !important;
+            color: white !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+            font-size: 12px !important;
+            margin: 0 0 10px 0 !important;
+            font-family: Arial, sans-serif !important;
+            font-weight: normal !important;
+        }
+
+        .archives-comp-excerpt-9847 {
+            color: #666 !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+            font-family: Arial, sans-serif !important;
+            display: block !important;
+        }
+
+        .archives-comp-no-results-9847 {
+            text-align: center !important;
+            padding: 40px !important;
+            color: #666 !important;
+            font-size: 16px !important;
+            font-family: Arial, sans-serif !important;
+            display: block !important;
+            margin: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .archives-component-wrapper-9847 {
+                padding: 10px !important;
+                margin: 0 !important;
+            }
+            
+            .archives-comp-header-9847 {
+                margin-bottom: 20px !important;
+                padding: 15px !important;
+            }
+            
+            .archives-comp-header-9847 h1 {
+                font-size: 24px !important;
+            }
+            
+            .archives-comp-search-input-9847 {
+                width: 100% !important;
+                max-width: none !important;
+                font-size: 16px !important;
+            }
+            
+            .archives-comp-item-9847 {
+                padding: 15px !important;
+            }
+            
+            .archives-comp-title-9847 {
+                font-size: 18px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .archives-component-wrapper-9847 {
+                padding: 5px !important;
+            }
+            
+            .archives-comp-header-9847 {
+                padding: 10px !important;
+            }
+            
+            .archives-comp-header-9847 h1 {
+                font-size: 20px !important;
+            }
+            
+            .archives-comp-item-9847 {
+                padding: 12px !important;
+            }
+            
+            .archives-comp-title-9847 {
+                font-size: 16px !important;
+            }
+        }
+
   
