@@ -2362,3 +2362,136 @@ nav ul li {
                 padding: 12px 8px;
             }
         }
+
+          .beagle-enthusiast-article * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .beagle-enthusiast-article {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .beagle-enthusiast-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .beagle-enthusiast-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
+        }
+        
+        .beagle-enthusiast-article h1 {
+            color: #8B4513;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .beagle-enthusiast-subtitle {
+            color: #666;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .beagle-enthusiast-article h2 {
+            color: #8B4513;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #DEB887;
+            padding-left: 15px;
+        }
+        
+        .beagle-enthusiast-article p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        
+        .beagle-enthusiast-highlight-box {
+            background-color: #FFF8DC;
+            border: 2px solid #DEB887;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .beagle-enthusiast-highlight-box p {
+            margin: 0;
+            font-weight: bold;
+            color: #8B4513;
+            font-size: 1.1em;
+        }
+        
+        .beagle-enthusiast-article ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .beagle-enthusiast-article li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .beagle-enthusiast-paw-print {
+            color: #DEB887;
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .beagle-enthusiast-container {
+                margin: 0;
+                padding: 15px;
+                box-shadow: none;
+            }
+            
+            .beagle-enthusiast-article h1 {
+                font-size: 1.8em;
+            }
+            
+            .beagle-enthusiast-article h2 {
+                font-size: 1.3em;
+                margin: 20px 0 10px 0;
+            }
+            
+            .beagle-enthusiast-article p, .beagle-enthusiast-article li {
+                font-size: 1em;
+            }
+            
+            .beagle-enthusiast-highlight-box {
+                margin: 20px 0;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .beagle-enthusiast-container {
+                padding: 10px;
+            }
+            
+            .beagle-enthusiast-article h1 {
+                font-size: 1.6em;
+            }
+            
+            .beagle-enthusiast-article h2 {
+                font-size: 1.2em;
+                padding-left: 10px;
+            }
+            
+            .beagle-enthusiast-article ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
