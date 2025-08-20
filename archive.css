@@ -2494,4 +2494,167 @@ nav ul li {
                 padding-left: 20px;
             }
         }
-    </style>
+        
+          .interview {
+            max-width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .meta {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        .profile {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .profile-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-title {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 3px solid #007bff;
+        }
+
+        .qa {
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .q-label {
+            font-weight: bold;
+            color: #0066cc;
+            font-size: 0.9rem;
+        }
+
+        .q-text {
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .answer {
+            padding: 15px;
+            background: #fff;
+            border-left: 3px solid #28a745;
+        }
+
+        .a-label {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 0.9rem;
+        }
+
+        .a-text {
+            margin-top: 5px;
+            line-height: 1.7;
+        }
+
+        .quote {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .photo-small {
+            max-width: 250px;
+        }
+
+        .photo-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .interview {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .question, .answer {
+                padding: 12px;
+            }
+        }
