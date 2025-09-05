@@ -2658,3 +2658,169 @@ nav ul li {
                 padding: 12px;
             }
         }
+        .dog-mental-health-article {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .dog-article-header {
+            text-align: center;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .dog-article-title {
+            font-size: 2.5rem;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .dog-article-subtitle {
+            font-size: 1.2rem;
+            color: #7F8C8D;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .dog-article-meta {
+            font-size: 0.9rem;
+            color: #95A5A6;
+        }
+
+        .dog-article-intro {
+            font-size: 1.1rem;
+            color: #34495E;
+            background-color: #F8F9FA;
+            padding: 20px;
+            border-left: 4px solid #3498DB;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .dog-article-section {
+            margin: 40px 0;
+        }
+
+        .dog-article-section-title {
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #E74C3C;
+            padding-bottom: 5px;
+        }
+
+        .dog-article-subsection-title {
+            font-size: 1.4rem;
+            color: #34495E;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .dog-article-text {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .dog-beagle-highlight {
+            background-color: #FFF3CD;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #FFC107;
+            margin: 20px 0;
+        }
+
+        .dog-beagle-highlight-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .dog-article-citation {
+            font-size: 0.9rem;
+            color: #6C757D;
+            background-color: #F8F9FA;
+            padding: 2px 6px;
+            border-radius: 3px;
+            text-decoration: none;
+            margin: 0 2px;
+        }
+
+        .dog-article-citation:hover {
+            background-color: #E9ECEF;
+            text-decoration: underline;
+        }
+
+        .dog-article-references {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #F8F9FA;
+            border-radius: 8px;
+        }
+
+        .dog-article-references-title {
+            font-size: 1.5rem;
+            color: #2C3E50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #95A5A6;
+            padding-bottom: 5px;
+        }
+
+        .dog-article-reference {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .dog-article-reference-number {
+            font-weight: bold;
+            color: #3498DB;
+        }
+
+        .dog-article-conclusion {
+            background-color: #E8F5E8;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #28A745;
+            margin: 40px 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .dog-mental-health-article {
+                padding: 15px;
+            }
+            
+            .dog-article-title {
+                font-size: 2rem;
+            }
+            
+            .dog-article-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .dog-article-subsection-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dog-article-title {
+                font-size: 1.7rem;
+            }
+            
+            .dog-article-intro {
+                padding: 15px;
+            }
+            
+            .dog-beagle-highlight {
+                padding: 12px;
+            }
+        }
