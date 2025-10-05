@@ -2824,3 +2824,25 @@ nav ul li {
                 padding: 12px;
             }
         }
+          .tips {
+            background-color: #fff3cd;
+            padding: 20px;
+            margin: 30px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .tips h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+
+        .tips ul {
+            margin-left: 20px;
+        }
+
+        .tips li {
+            margin: 10px 0;
+        }
+
+        
