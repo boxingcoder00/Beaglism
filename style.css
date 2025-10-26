@@ -73,14 +73,7 @@
           .landingpage-container {
             max-width: 1200px;
           }
-          
-          .hero-text h1 {
-            font-size: 5rem;
-          }
-          
-          .hero-text p {
-            font-size: 2rem;
-          }
+
         }
 
         /* Header - Now using flexbox */
@@ -673,53 +666,7 @@
           cursor: pointer;
         }
 
-        /* Hero Section */
-        .hero-content {
-          display: flex;
-          align-items: center;
-          gap: 60px;
-        }
-
-        .hero-text {
-          flex: 1;
-        }
-
-        .hero-text h1 {
-          font-size: 3.2rem;
-          font-weight: 700;
-          margin-bottom: 20px;
-          color: #1f2937;
-          font-family: 'Coiny', cursive;
-          letter-spacing: 0.01em;
-          font-size: 140px;
-          font-weight: bold;
-        }
-
-        .hero-text p {
-          font-size: 2.5rem;
-          color: #000000;
-          margin-bottom: 30px;
-          line-height: 1.6; 
-          margin-bottom: 1.5em;
-        }
-
-        .hero-image {
-          flex: 1;
-          max-width: auto;
-          height: auto;
-        }
-
-        .hero-image img {
-          border-radius: 10px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          transition: transform 0.5s ease;
-          max-width: 100%;
-          max-height: 40%;
-        }
-
-        .hero-image img:hover {
-          transform: scale(1.02);
-        }
+  
 
         /* Beagle Resources Section */
         .beagle-pros-cons {
@@ -734,69 +681,6 @@
 
         .beagle-pros-cons h2 {
           margin-top: 0;
-        }
-
-        /* Slideshow Styles */
-        .slideshow-container {
-          position: relative;
-          max-width: 100%;
-          margin: auto;
-        }
-
-        .slide {
-          display: none;
-          animation: fade 0.5s ease-in-out;
-        }
-
-        .slide.active {
-          display: block;
-        }
-
-        .fade {
-          animation-name: fade;
-          animation-duration: 0.5s;
-        }
-
-        @keyframes fade {
-          from {opacity: 0.4}
-          to {opacity: 1}
-        }
-
-        .nav-arrow {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-color: rgba(0,0,0,0.5);
-          color: white;
-          border: none;
-          padding: 3px;
-          cursor: pointer;
-          font-size: 18px;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-          transition: background-color 0.3s ease;
-        }
-
-        .nav-arrow:hover {
-          background-color: rgba(0,0,0,0.8);
-        }
-
-        .nav-arrow.prev {
-          left: 0;
-          border-radius: 0 3px 3px 0;
-        }
-
-        .nav-arrow.next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-
-        .nav-arrow.prev::before {
-          content: '❮';
-        }
-
-        .nav-arrow.next::before {
-          content: '❯';
         }
 
 /* Mobile Responsive Styles */
@@ -1731,143 +1615,7 @@ nav ul li {
                 margin-bottom: 5px;
                 margin-right: 0;
             }
-
           }
-
-            .slideshow-container {
-              max-width: 500px; /* A more reasonable max-width */
-              position: relative;
-              margin: 0 auto; /* This centers horizontally */
-              display: flex; /* Add this */
-              flex-direction: column; /* Add this */
-              align-items: center; /* Add this */
-              margin-bottom: auto;
-            }
-          
-            .slide {
-              display: none; /* Initially hide all slides */
-              width: 100%; /* Make slides take full width of container */
-              text-align: center; /* Center the image within the slide */
-              display: flex;
-            }
-          
-            .slide img {
-              width: 800%; /* Make images fill the container */
-              height: auto; /* Maintain aspect ratio */
-              margin: 0 auto; /* Center the image */
-              align-items: center; /* Add this */
-              display: flex;
-            }          
-
-            .nav-arrow {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              width: 50px;
-              height: 50px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              cursor: pointer;
-              border-radius: 3px;
-              background-color: rgba(255, 255, 255, 0.7);
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-              transition: all 0.3s ease;
-              z-index: 10; /* Add this to ensure they're above slides */
-            }
-            
-            .nav-arrow:hover {
-              background-color: rgba(255, 255, 255, 0.9);
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            }
-            
-            .nav-arrow.prev {
-              left: 20px;
-            }
-            
-            .nav-arrow.next {
-              right: 20px;
-            }
-            
-            .arrow-icon {
-              border: solid #333;
-              border-width: 0 3px 3px 0;
-              display: inline-block;
-              padding: 6px;
-              transition: all 0.3s ease;
-            }
-            
-            .nav-arrow.prev .arrow-icon {
-              transform: rotate(135deg);
-            }
-            
-            .nav-arrow.next .arrow-icon {
-              transform: rotate(-45deg);
-            }
-            
-            .nav-arrow:hover .arrow-icon {
-              border-color: #000;
-            }
-            .next {
-              right: 0;
-              border-radius: 3px 0 0 3px;
-            }
-
-            .prev:active, .next:active {
-              background-color: rgba(255, 255, 255, 0.7); /* Same as normal state */
-            }
-          
-            /* Fading animation */
-            .fade {
-              animation-name: fade;
-              animation-duration: 1.5s;
-            }
-          
-            @keyframes fade {
-              from {opacity: .4}
-              to {opacity: 1}
-            }
-
-            /* Media queries for different screen sizes */
-@media screen and (max-width: 768px) {
-  .nav-arrow {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .arrow-icon {
-    padding: 5px;
-  }
-
-  .landingpage-container{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    padding: 0.1rem;
-    margin-bottom: 0;
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .nav-arrow {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .arrow-icon {
-    padding: 4px;
-  }
-  
-  .nav-arrow.prev {
-    left: 5px;
-  }
-  
-  .nav-arrow.next {
-    right: 5px;
-  }
-}
 
  .beagle-nutrition-container * {
             box-sizing: border-box;
@@ -2364,4 +2112,230 @@ nav ul li {
             }
         }
 
+         .hero {
+            background: linear-gradient(180deg, #fff5f0 0%, #fff 100%);
+            padding: 80px 40px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #8B4513;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+        }
+
+        .hero-image {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            font-size: 60px;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.8s;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-1 { background: linear-gradient(135deg, #FFE4B5 0%, #DEB887 100%); }
+        .slide-2 { background: linear-gradient(135deg, #F4A460 0%, #CD853F 100%); }
+        .slide-3 { background: linear-gradient(135deg, #DEB887 0%, #D2B48C 100%); }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s ease;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.5);
+            user-select: none;
+            z-index: 10;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dots {
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+      
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+          }
+
+          .feature-card {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
   

@@ -94,46 +94,61 @@
         </div>
     </header>
   
-    <div class="landingpage-container">
-        <div class="slideshow-container">
-            <div class="slide fade">
-                <img src="img/bandits2.jpeg" alt="What started Beaglism! These are the inspirations behind the movement. #Beaglism">
+     <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Everything You Need to Know About Beagles</h1>
+                <p class="subtitle">Your complete guide to Beagle life</p>
+                <p>Expert training tips, breed insights, and everything you need to give your floppy-eared friend their best life.</p>
+                <p>Considering adding a beagle to your family? Research everything about beagles below and discover why they're one of the most beloved companion breeds!</p>
+                <a href="/beagle-resources" class="cta-button">Start Exploring</a>
             </div>
-        
-            <div class="slide fade">
-                <img src="img/beagleinbasket.jpg" alt="Three puppies in a basket">
-            </div>
-        
-            <div class="slide fade">
-                <img src="img/wild.jpg" alt="We advocate for using Beagles what they were made for. The beagle will absolutely love it!">
-            </div>
-
-            <div class="slide fade">
-                <img src="img/puppy.jpg" alt="The Perfect Beagle.">
-            </div>
-
-            <div class="slide fade">
-                <img src="img/BeagleHist2.jpg" alt="The history of beagles">
-            </div>
-            
-            <!-- Basic Navigation Arrows -->
-            <div class="nav-arrow prev"></div>
-            <div class="nav-arrow next"></div>
-        </div> 
-    </div>
-
-    <div class="hero-container">
-        <!-- Title Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p>Your complete guide to Beagle life: expert training tips, breed insights, and everything you need to give your floppy-eared friend their best life.</p>
+            <div class="hero-image">
+                <div class="slideshow-container">
+                    <div class="slide slide-1 active"><img src="/img/bandits2.jpeg" alt="two beagles sitting outside in the sun"></div>
+                    <div class="slide slide-2"><img src="/img/puppy.jpg" alt="A small puppy beagle"></div>
+                    <div class="slide slide-3"><img src="/img/puppy1.jpg" alt="3 beagles inside of a basket"></div>
+                    <div class="slide slide-4"><img src="/img/old.jpg" alt="A picture of a beagle going back decades in England"></div>
+                    <div class="slide slide-5"><img src="/img/oldschool.jpg" alt="A Beaglist and his beagles pose for a picture"></div>
+                    <div class="slide slide-6"><img src="/img/beagle-brothers.jpg" alt="3 beagles inside of a basket"></div>
+                    
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    
+                    <div class="dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>    
+        </div>
+    </section>
+
+            <section class="features">
+            <a href="/Resources/BeagleTraining" class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Expert Training Tips</h3>
+                <p>Learn proven techniques to train your beagle effectively and build a strong bond with positive reinforcement.</p>
+            </a>
+            
+            <a href="/archive/Ikers-interview" class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Beagle owner interviews</h3>
+                <p>Considering a beagle? Discover what beagle ownership is really like, including daily exercise needs, training tips, and personality traits.</p>
+            </a>
+            
+            <a href="/Resources/Beaglegrooming" class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Complete Beagle Care</h3>
+                <p>From nutrition to health to exercise, get everything you need to care for your beagle properly.</p>
+            </a>
+            </section>
+
 
     <section class="cta-section">
         <div class="cta-container">
@@ -218,51 +233,40 @@
             }
         });
         
-        // Slideshow functionality
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        let slideIndex = 0;
+showSlides();
 
-        // Attach event listeners to the navigation arrows
-        document.querySelector('.nav-arrow.prev').addEventListener('click', function() {
-            plusSlides(-1);
-        });
+function changeSlide(n) {
+    slideIndex += n;
+    showSlides();
+}
 
-        document.querySelector('.nav-arrow.next').addEventListener('click', function() {
-            plusSlides(1);
-        });
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+}
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    if (slideIndex < 0) {slideIndex = slides.length - 1}
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    
+    slides[slideIndex].classList.add("active");
+    dots[slideIndex].classList.add("active");
+}
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+// Automatic Slideshow
+setInterval(function() {
+    changeSlide(1);
+}, 8000);
 
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                if (dots[i]) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-            }
-            slides[slideIndex-1].style.display = "block";
-            if (dots[slideIndex-1]) {
-                dots[slideIndex-1].className += " active";
-            }
-        }
-
-        // Automatic Slideshow
-        setInterval(function() {
-            plusSlides(1);
-        }, 8000); // Change image every 8 seconds
     </script>
