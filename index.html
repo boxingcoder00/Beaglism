@@ -233,8 +233,25 @@
             }
         });
         
-        let slideIndex = 0;
+       // Slideshow functionality
+let slideIndex = 0;
 showSlides();
+
+// Add event listeners for prev/next buttons
+document.querySelector('.prev').addEventListener('click', function() {
+    changeSlide(-1);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    changeSlide(1);
+});
+
+// Add event listeners for dots
+document.querySelectorAll('.dot').forEach(function(dot, index) {
+    dot.addEventListener('click', function() {
+        currentSlide(index);
+    });
+});
 
 function changeSlide(n) {
     slideIndex += n;
@@ -263,7 +280,6 @@ function showSlides() {
     slides[slideIndex].classList.add("active");
     dots[slideIndex].classList.add("active");
 }
-
 // Automatic Slideshow
 setInterval(function() {
     changeSlide(1);
