@@ -2,73 +2,132 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KHGGNW1B9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8KHGGNW1B9');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KHGGNW1B9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8KHGGNW1B9');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Beaglism's journey, from passionate start-up to trusted beagle authority. Learn our mission to improve beagle welfare, meet our expert team, and see how our values shape everything we do.">
     <meta name="keywords" content="Beaglism, beagle movement, beagle welfare, beagle rescue, beagle awareness, beagle community, beagle mistreatment, beagle adoption, beagle merchandise, responsible beagle ownership, beagle care, animal welfare, beagle charity, beagle education, beagle advocacy, beagle lovers, dog rescue, pet adoption">
+    
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="About Beaglism - Our Mission to Protect and Advocate for Beagles">
+    <meta property="og:description" content="Learn about Beaglism's mission to improve beagle welfare, support rescue efforts, and promote responsible ownership through education and advocacy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.beaglism.com/About">
+    <meta property="og:image" content="https://www.beaglism.com/img/beaglism-og-image.jpg">
+    <meta property="og:site_name" content="Beaglism">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Beaglism - Our Mission to Protect and Advocate for Beagles">
+    <meta name="twitter:description" content="Learn about Beaglism's mission to improve beagle welfare, support rescue efforts, and promote responsible ownership through education and advocacy.">
+    <meta name="twitter:image" content="https://www.beaglism.com/img/beaglism-og-image.jpg">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Beaglism -  A movement to spread awareness on our beloved dog breed | Beaglism.com</title>
+    <title>About Beaglism - Our Mission to Protect and Advocate for Beagles | Beaglism.com</title>
     <link rel="canonical" href="https://www.beaglism.com/About"/>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Beaglism",
+      "url": "https://www.beaglism.com",
+      "logo": "https://www.beaglism.com/logo.png",
+      "description": "A movement dedicated to spreading awareness about beagles, promoting responsible ownership, and supporting beagle welfare and rescue efforts.",
+      "foundingDate": "2025",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61573450586594",
+        "https://www.instagram.com/beagliiism/",
+        "https://www.pinterest.com/beaglism/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.beaglism.com/Contact"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - AboutPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Beaglism",
+      "description": "Learn about Beaglism's mission to improve beagle welfare, support rescue efforts, and promote responsible ownership",
+      "url": "https://www.beaglism.com/About",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.beaglism.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://www.beaglism.com/About"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
-
-
-<header>
-        <div class="header-container">
-            <h1>🐕 The Beagle Owner's Hub</h1>
-            <p>Everything you need to know about these amazing hounds</p>
-        </div>
-</header>
-
 
 <body>
     <header>
         <div class="resource-container">
             <div id="branding">
-                  <h2>
-                <a href="../"><img src="logo.png" alt="Beaglism Logo" class="logo">Beaglism</a>
-            </h2>
+                <h2>
+                    <a href="../">
+                        <img src="logo.png" alt="Beaglism Logo - Beagle Welfare and Advocacy Organization" class="logo">
+                        Beaglism
+                    </a>
+                </h2>
             </div>
 
-              <!-- Mobile Menu Button -->
+            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
             </button>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/beaglism-news">Beaglism news</a></li>
-                    <li class="current"><a href="/About">About us</a></li>
+                    <li class="current"><a href="/About" aria-current="page">About us</a></li>
                     <li class="simple-dropdown">
                         <a href="/beagle-resources" class="dropbtn">Beagle Resources</a>
                         <div class="dropdown-items">
-                        <a href="Resources/why-buy-a-beagle">Why You Should Adopt a Beagle: The Ultimate Guide</a>
-                       <a href="Resources/BeagleTraining">How to Train a Beagle: Complete Training Tips</a>
-                        <a href="Resources/BeagleNutrition">Beagle Care Essentials: Proper Nutrition</a>
-                        <a href="Resources/BeagleAndTheSun">Why Do Beagles Love the Sun? </a>
-                        <a href="Resources/BeaglepPro&cons">Complete List of Beagle Pros and Cons</a>
-                        <a href="Resources/Beaglegrooming">Professional Tips for At-Home Beagle Care</a>
-                        <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
-                        <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
-                        <a href="Resources/Beaglefavoritequotes">Top 5 Beagle quotes!</a>
-                        <a href="Resources/Beagleproofing">How to Beagle-Proof Your House</a>
+                            <a href="Resources/why-buy-a-beagle">Why You Should Adopt a Beagle: The Ultimate Guide</a>
+                            <a href="Resources/BeagleTraining">How to Train a Beagle: Complete Training Tips</a>
+                            <a href="Resources/BeagleNutrition">Beagle Care Essentials: Proper Nutrition</a>
+                            <a href="Resources/BeagleAndTheSun">Why Do Beagles Love the Sun?</a>
+                            <a href="Resources/BeaglepPro&cons">Complete List of Beagle Pros and Cons</a>
+                            <a href="Resources/Beaglegrooming">Professional Tips for At-Home Beagle Care</a>
+                            <a href="Resources/BeagleAdoptnotShop">Adoption No Shopping!</a>
+                            <a href="Resources/BeagleFunFacts">Beagle Fun facts!</a>
+                            <a href="Resources/Beaglefavoritequotes">Top 5 Beagle quotes!</a>
+                            <a href="Resources/Beagleproofing">How to Beagle-Proof Your House</a>
                         </div>
                     </li>
                     <li><a href="/Support">Spread Awareness</a></li>
-                   <li><a href="/beagle-games">Interactive Beagle Games & Tools</a></li>
+                    <li><a href="/beagle-games">Interactive Beagle Games & Tools</a></li>
                     <li><a href="/Contact">Contact us</a></li>
                     <li><a href="/credits">Credits</a></li>
                 </ul>
@@ -76,96 +135,115 @@
         </div>
     </header>
 
-    <section id="main">
-        <div class="container">
-          <article id="main-col">
-            <h1 class="page-title">Who We Are | Beaglism</h1>
-            <p1> 
-
-                Growing up, my family had no pets. My parents always said we had no time to care for them (and looking back, my mother was right). 
-                
-                But when my sister and I got older, everything changed when we welcomed our first dog into our home—a beautiful beagle named Princess!
-
-                From the moment Princess arrived, we fell head over heels in love. She was not only beautiful but incredibly intelligent, quickly becoming an irreplaceable member of our family. 
-                
-                Sadly, we lost Princess at a young age, leaving a void in our hearts that felt impossible to fill.
-
-                In time, we welcomed two more beagles into our home. These playful companions were an absolute howl to have around (get it? hah!). 
-                
-                As the years passed, my love for the breed only deepened, especially through interactions with fellow beagle enthusiasts at the local dog park.
-
-                It was during one of these park visits that "Beaglism" first came to mind—a way to give back to beagles and all dogs for the countless happy memories they've brought into my life.                     
-                                
-                As a result, we are now here ...<br> <br>
-
-                 <img src="img/beagle-brothers.jpg" alt="Two beagle dogs bonding - responsible beagle ownership example" class="content-image"><br>
-                
-                Beaglism: A Movement Like No Other!<br> <br>
-
-                At Beaglism, we're all about spreading the word on beagles! We want to shine a light on how these awesome dogs are sometimes mistreated and help people learn more about them.
-
-                Our mission is to share the happiness and joy these furry friends bring through social media, newsletters, and whatever else we can use. 
-                
-                We create one-of-a-kind merchandise that helps fund donations and charity work as a way to make a real difference.
-
-                Anyone can join us – doesn't matter if you have a beagle, another dog, or just love dogs in general!
-                
-                Join us in spreading the Beaglism movement!
+    <main>
+        <section id="main">
+            <div class="container">
+                <article id="main-col">
+                    <h1 class="page-title">About Beaglism: Our Story and Mission</h1>
                     
-            </p1>
-            <p>
-            <br>
-                
-                <br><Strong>Our mission is driven by these core goals:</Strong><br>
+                    <div class="about-content">
+                        <h2>Our Story</h2>
+                        <p>
+                            Growing up, my family had no pets. My parents always said we had no time to care for them (and looking back, my mother was right). 
+                        </p>
+                        <p>
+                            But when my sister and I got older, everything changed when we welcomed our first dog into our home—a beautiful beagle named Princess!
+                        </p>
+                        <p>
+                            From the moment Princess arrived, we fell head over heels in love. She was not only beautiful but incredibly intelligent, quickly becoming an irreplaceable member of our family. 
+                        </p>
+                        <p>
+                            Sadly, we lost Princess at a young age, leaving a void in our hearts that felt impossible to fill.
+                        </p>
+                        <p>
+                            In time, we welcomed two more beagles into our home. These playful companions were an absolute howl to have around (get it? hah!). 
+                        </p>
+                        <p>
+                            As the years passed, my love for the breed only deepened, especially through interactions with fellow beagle enthusiasts at the local dog park.
+                        </p>
+                        <p>
+                            It was during one of these park visits that "Beaglism" first came to mind—a way to give back to beagles and all dogs for the countless happy memories they've brought into my life.                     
+                        </p>
+                        <p>
+                            As a result, we are now here...
+                        </p>
 
-                <br><Strong>Raise Awareness:</Strong> Educate the public about the common mistreatment of beagles, particularly in research facilities and puppy mills, and promote responsible breeding practices.<br>
+                        <img src="img/beagle-brothers.jpg" alt="Two beagle dogs bonding - responsible beagle ownership example" class="content-image">
+                        
+                        <h2>Beaglism: A Movement Like No Other!</h2>
+                        <p>
+                            At Beaglism, we're all about spreading the word on beagles! We want to shine a light on how these awesome dogs are sometimes mistreated and help people learn more about them.
+                        </p>
+                        <p>
+                            Our mission is to share the happiness and joy these furry friends bring through social media, newsletters, and whatever else we can use. 
+                        </p>
+                        <p>
+                            We create one-of-a-kind merchandise that helps fund donations and charity work as a way to make a real difference.
+                        </p>
+                        <p>
+                            Anyone can join us – doesn't matter if you have a beagle, another dog, or just love dogs in general!
+                        </p>
+                        <p>
+                            Join us in spreading the Beaglism movement!
+                        </p>
 
-                <br><Strong>Ethical Treatment:</Strong> Work with lawmakers and organizations to strengthen animal welfare laws that protect beagles and all dogs from cruelty and neglect.<br>
+                        <h2>Our Core Mission and Goals</h2>
+                        <p>Our mission is driven by these core goals:</p>
 
-                <br><Strong>Support Rescue Efforts:</Strong> Partner with beagle rescue organizations to help rehome abandoned, surrendered, and rescued beagles, giving them a second chance at a loving home.<br>
+                        <h3>Raise Awareness</h3>
+                        <p>
+                            Educate the public about the common mistreatment of beagles, particularly in research facilities and puppy mills, and promote responsible breeding practices.
+                        </p>
 
-                <br><Strong>Promote Responsible Ownership:</Strong> Provide resources and information to help current and prospective beagle owners understand the breed's specific needs, temperament, and care requirements.<br>
+                        <h3>Ethical Treatment</h3>
+                        <p>
+                            Work with lawmakers and organizations to strengthen animal welfare laws that protect beagles and all dogs from cruelty and neglect.
+                        </p>
 
-                <br><Strong>Build Community:</Strong> Create a welcoming space for beagle lovers to connect, share stories, and support each other in providing the best possible lives for these wonderful dogs.<br>
+                        <h3>Support Rescue Efforts</h3>
+                        <p>
+                            Partner with beagle rescue organizations to help rehome abandoned, surrendered, and rescued beagles, giving them a second chance at a loving home.
+                        </p>
 
-            </p>
-            <p>
-            </p>
-            <p>
-                In conclusion, here at Beaglism we want to help, love and spread information on the Beagle breed. As we grow, we aim to educate and assist more people who love these wonderful dogs. We invite you to join us on this journey and make a positive impact together! #Beaglism
-            </p>
+                        <h3>Promote Responsible Ownership</h3>
+                        <p>
+                            Provide resources and information to help current and prospective beagle owners understand the breed's specific needs, temperament, and care requirements.
+                        </p>
 
-          </article>
-        </body>
-</html>
+                        <h3>Build Community</h3>
+                        <p>
+                            Create a welcoming space for beagle lovers to connect, share stories, and support each other in providing the best possible lives for these wonderful dogs.
+                        </p>
 
-    <section id="boxes">
-        <div class="container">
-            <div class="box">
-                <img src="img/old.jpg" alt="Classic old-fashioned beagle photograph">
-                <h3></h3>
-                <p><br>
-                   </p>
+                        <h2>Looking Forward</h2>
+                        <p>
+                            In conclusion, here at Beaglism we want to help, love and spread information on the Beagle breed. As we grow, we aim to educate and assist more people who love these wonderful dogs. We invite you to join us on this journey and make a positive impact together! #Beaglism
+                        </p>
+                    </div>
+                </article>
             </div>
-            <div class="box">
-                <img src="img/Beagle2.jpg" alt="Happy dogs running and chasing each other">
-                <h3></h3>
-                <p></p>
-            </div>
-            <div class="box">
-                <img src="img/Tracking.jpg" alt="Beagle hunting with nose to the ground">
-                <h3></h3>
-                <p></p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-   
+        <section id="boxes">
+            <div class="container">
+                <div class="box">
+                    <img src="img/old.jpg" alt="Classic vintage beagle photograph showcasing breed history" loading="lazy">
+                </div>
+                <div class="box">
+                    <img src="img/Beagle2.jpg" alt="Happy beagles running and playing together outdoors" loading="lazy">
+                </div>
+                <div class="box">
+                    <img src="img/Tracking.jpg" alt="Beagle using natural tracking instincts with nose to the ground" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>Beaglism , Copyright &copy; Dedicated to promoting responsible beagle ownership and education.</p>
-        <a href="https://www.facebook.com/profile.php?id=61573450586594"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/beagliiism/"><i class="fa-brands fa fa-instagram"></i></a>
-        <a href="https://www.pinterest.com/beaglism/"><i class="fa-brands fa-pinterest"></i></a>
+        <p>Beaglism, Copyright &copy; Dedicated to promoting responsible beagle ownership and education.</p>
+        <a href="https://www.facebook.com/profile.php?id=61573450586594" aria-label="Visit Beaglism on Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/beagliiism/" aria-label="Visit Beaglism on Instagram"><i class="fa-brands fa fa-instagram"></i></a>
+        <a href="https://www.pinterest.com/beaglism/" aria-label="Visit Beaglism on Pinterest"><i class="fa-brands fa-pinterest"></i></a>
         <span class="separator">|</span>
         <a href="/termsandconditions">Terms & Conditions</a> 
         <span class="separator">|</span>
@@ -173,8 +251,6 @@
     </footer>
 
     <script>
-
-         
         // Mobile menu functionality
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('header nav');
@@ -189,12 +265,31 @@
         // Handle dropdown clicks on mobile
         dropdownItems.forEach(dropdown => {
             const dropbtn = dropdown.querySelector('.dropbtn');
+            
             dropbtn.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Close other dropdowns
+                    dropdownItems.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
                     dropdown.classList.toggle('active');
                 }
             });
+            
+            // Prevent dropdown items from closing the menu when clicked
+            const dropdownMenu = dropdown.querySelector('.dropdown-items');
+            if (dropdownMenu) {
+                dropdownMenu.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
         });
 
         // Close mobile menu when clicking outside
@@ -218,5 +313,6 @@
                 });
             }
         });
-
     </script>
+</body>
+</html>
