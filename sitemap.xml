@@ -192,4 +192,66 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+   <url>
+        <loc>https://www.beaglism.com/archive/why-dogs-lick-and-what-it-means.html</loc>
+        <lastmod>2025-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+    <loc>https://www.beaglism.com/archive/why-is-my-beagle-always-hungry.html</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.beaglism.com/archive/why-rotating-dog-foods-is-beneficial.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.beaglism.com/archive/why-do-dogs-pull-on-leashes.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.beaglism.com/archive/why-do-dogs-eat-grass.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.beaglism.com/archive/why-do-beagles-howl-so-much.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.beaglism.com/archive/why-are-beagles-used-for-testing.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://www.beaglism.com/archive/what-can-dogs-with-allergies-eat.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.beaglism.com/archive/unusual-behaviors-unique-to-beagles.html</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://www.beaglism.com/archive/the-best-dog-sports-for-beagles.html</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
 </urlset>
